@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A382F620EDE84900E79F52 /* HttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F520EDE84900E79F52 /* HttpTools.m */; };
+		01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F920EDF1C500E79F52 /* Greeting.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
 		01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2220E487E2004C8FDF /* ViewController.m */; };
 		01CD2A2620E487E2004C8FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2420E487E2004C8FDF /* Main.storyboard */; };
@@ -18,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		00264D19BBF8231C0B4D1147 /* libPods-11111.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-11111.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A382F420EDE84900E79F52 /* HttpTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpTools.h; sourceTree = "<group>"; };
+		01A382F520EDE84900E79F52 /* HttpTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTools.m; sourceTree = "<group>"; };
+		01A382F820EDF1C500E79F52 /* Greeting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Greeting.h; sourceTree = "<group>"; };
+		01A382F920EDF1C500E79F52 /* Greeting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Greeting.m; sourceTree = "<group>"; };
 		01CD2A1B20E487E2004C8FDF /* 11111.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11111.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CD2A1E20E487E2004C8FDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01CD2A1F20E487E2004C8FDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +50,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A382F320EDE82400E79F52 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				01A382F420EDE84900E79F52 /* HttpTools.h */,
+				01A382F520EDE84900E79F52 /* HttpTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		01A382F720EDF1B100E79F52 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				01A382F820EDF1C500E79F52 /* Greeting.h */,
+				01A382F920EDF1C500E79F52 /* Greeting.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		01CD2A1220E487E2004C8FDF = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +89,8 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01A382F720EDF1B100E79F52 /* DataModel */,
+				01A382F320EDE82400E79F52 /* Tools */,
 				01CD2A1E20E487E2004C8FDF /* AppDelegate.h */,
 				01CD2A1F20E487E2004C8FDF /* AppDelegate.m */,
 				01CD2A2120E487E2004C8FDF /* ViewController.h */,
@@ -190,6 +216,8 @@
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
+				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
+				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

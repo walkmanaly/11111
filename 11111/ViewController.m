@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "HttpTools.h"
+#import "Greeting.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"hello world");
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [HttpTools getWithParams:@"?name=Nick" successed:^(NSDictionary *successed) {
+        NSLog(@"successed%@", successed);
+        Greeting *greet = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
+        NSLog(@"greet.id=%@, greet.content=%@", greet.id, greet.content);
+    } failured:^(NSString *failured) {
+        NSLog(@"failured%@", failured);
+    }];
+    
 }
 
 
