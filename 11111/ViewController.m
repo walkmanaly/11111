@@ -25,12 +25,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [HttpTools getWithParams:@"?name=Nick" successed:^(NSDictionary *successed) {
-        NSLog(@"successed%@", successed);
-        Greeting *greet = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
-        NSLog(@"greet.id=%@, greet.content=%@", greet.id, greet.content);
+//    [HttpTools getWithParams:@"?name=Nick" successed:^(NSDictionary *successed) {
+//        NSLog(@"successed%@", successed);
+//        Greeting *greet = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
+//        NSLog(@"greet.id=%@, greet.content=%@", greet.id, greet.content);
+//    } failured:^(NSString *failured) {
+//        NSLog(@"failured%@", failured);
+//    }];
+    
+    [HttpTools getRequestWithSuccess:^(NSDictionary *successed) {
+        
     } failured:^(NSString *failured) {
-        NSLog(@"failured%@", failured);
+        
     }];
     
 }
