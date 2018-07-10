@@ -10,6 +10,8 @@
 #import "HttpTools.h"
 #import "Greeting.h"
 
+#import "OneViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -33,11 +35,15 @@
 //        NSLog(@"failured%@", failured);
 //    }];
     
-    [HttpTools getRequestWithSuccess:^(NSDictionary *successed) {
-        
-    } failured:^(NSString *failured) {
-        
-    }];
+//    [HttpTools getRequestWithSuccess:^(NSDictionary *successed) {
+//
+//    } failured:^(NSString *failured) {
+//
+//    }];
+
+    OneViewController *vc = [[OneViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

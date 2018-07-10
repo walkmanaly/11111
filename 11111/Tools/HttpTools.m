@@ -42,9 +42,11 @@
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/greeting" ,baseurl]] cachePolicy:1 timeoutInterval:20];
     NSURLSessionDataTask *session = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"%@", response);
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
         
                 NSLog(@"%@", dict);
+        successed(dict);
         
     }];
     
