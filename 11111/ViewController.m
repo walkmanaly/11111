@@ -12,6 +12,7 @@
 #import "Product.h"
 #import "OneViewController.h"
 #import <objc/runtime.h>
+#import "Book.h"
 
 @interface ViewController ()
 
@@ -59,7 +60,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
-    [self demoKVC];
+//    [self demoKVC];
+    [self demoDecode];
 
 }
 
@@ -145,6 +147,21 @@
     
 }
 
-
+- (void)demoDecode {
+    Book *book = [[Book alloc] init];
+    book.title = @"code complete";
+    book.desc = @"代码大全";
+    book.pages = 625.0;
+    book.avilible = YES;
+    
+    NSString *Deocument = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *path = [NSString stringWithFormat:@"%@/file", Deocument];
+    
+    
+    BOOL isSuccessed = [NSKeyedArchiver archiveRootObject:book toFile:path];
+    
+    Book *unarch = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    NSLog(@"%@", unarch);
+}
 
 @end

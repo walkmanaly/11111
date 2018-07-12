@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		018BE89320F6E98000002064 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89220F6E98000002064 /* Product.m */; };
+		018BE8A020F7495600002064 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89F20F7495600002064 /* Book.m */; };
 		01A382F620EDE84900E79F52 /* HttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F520EDE84900E79F52 /* HttpTools.m */; };
 		01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F920EDF1C500E79F52 /* Greeting.m */; };
 		01A382FD20F4508100E79F52 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382FC20F4508100E79F52 /* OneViewController.m */; };
@@ -26,6 +27,8 @@
 		00264D19BBF8231C0B4D1147 /* libPods-11111.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-11111.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		018BE89120F6E98000002064 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		018BE89220F6E98000002064 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		018BE89E20F7495600002064 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		018BE89F20F7495600002064 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		01A382F420EDE84900E79F52 /* HttpTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpTools.h; sourceTree = "<group>"; };
 		01A382F520EDE84900E79F52 /* HttpTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTools.m; sourceTree = "<group>"; };
 		01A382F820EDF1C500E79F52 /* Greeting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Greeting.h; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				01A382F920EDF1C500E79F52 /* Greeting.m */,
 				018BE89120F6E98000002064 /* Product.h */,
 				018BE89220F6E98000002064 /* Product.m */,
+				018BE89E20F7495600002064 /* Book.h */,
+				018BE89F20F7495600002064 /* Book.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018BE8A020F7495600002064 /* Book.m in Sources */,
 				01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */,
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
