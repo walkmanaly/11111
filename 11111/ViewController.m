@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"hello world");
+//    NSLog(@"hello world");
 
 }
 
@@ -41,10 +41,26 @@
 //
 //    }];
 
-    OneViewController *vc = [[OneViewController alloc] init];
+//    OneViewController *vc = [[OneViewController alloc] init];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op");
+    }];
+    
+//    [op start];
+    
+    [queue addOperation:op];
+    
+    NSBlockOperation *clockOp = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"clockOp");
+    }];
+    [queue addOperation:clockOp];
+    
+    [clockOp addDependency:op];
 }
 
 
