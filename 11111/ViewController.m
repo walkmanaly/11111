@@ -61,8 +61,21 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
 //    [self demoKVC];
-    [self demoDecode];
+//    [self demoDecode];
+//    [self testRunLoop];
+    [self demoRequest];
+}
 
+- (void)testRunLoop {
+    
+    NSRunLoop *maimLoop = [NSRunLoop mainRunLoop];
+    dispatch_queue_t queue = dispatch_queue_create("Nick", NULL);
+    dispatch_async(queue, ^{
+        NSRunLoop *currruntloop = [NSRunLoop currentRunLoop];
+        NSLog(@"currruntloop:%@", currruntloop);
+    });
+    NSLog(@"maimLoop:%@", maimLoop);
+    
 }
 
 - (void)demoTestPush {
