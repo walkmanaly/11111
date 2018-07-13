@@ -100,7 +100,7 @@
     [HttpTools getWithParams:@"?name=Nick" successed:^(NSDictionary *successed) {
         NSLog(@"successed%@", successed);
         Greeting *greet = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
-        NSLog(@"greet.id=%@, greet.content=%@", greet.id, greet.content);
+        NSLog(@"----greet.id=%@, greet.content=%@", greet.id, greet.content);
     } failured:^(NSString *failured) {
         NSLog(@"failured%@", failured);
     }];
