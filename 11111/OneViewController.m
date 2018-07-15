@@ -9,7 +9,12 @@
 #import "OneViewController.h"
 #import "TwoViewController.h"
 
+typedef void(^testBlock)(void);
+
 @interface OneViewController ()
+
+@property (nonatomic, copy) testBlock testB;
+@property (nonatomic, copy) NSString *testStr;
 
 @end
 
@@ -19,6 +24,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self testRecycleReferance];
+    
+}
+
+- (void)testRecycleReferance {
+    if (self.sendTextBlock) {
+        self.sendTextBlock(@"text");
+    }
+    
+    self.testB = ^{
+        NSString *strr = self.testStr;
+    };
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -31,14 +49,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    NSLog(@"dealloc");
 }
-*/
 
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^SendTextBlock)(NSString *str);
+
 @interface OneViewController : UIViewController
+
+@property (nonatomic, copy) SendTextBlock sendTextBlock;
 
 @end

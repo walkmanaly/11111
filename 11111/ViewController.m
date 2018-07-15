@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) NSMutableArray *products;
 @property (nonatomic, strong) NSMutableArray *iMacs;
+@property (nonatomic, strong) UILabel *textLabel;
 
 @end
 
@@ -56,14 +57,47 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    NSLog(@"hello world");
 
+    [self testRuntime1];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-
+    [self demoTestPush];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
-    [self demoRequest];
+//    [self demoRequest];
+//    [self testRuntime];
+}
+
+- (void)testRuntimeCreateNewClass {
+    
+}
+
+- (void)testRuntime1 {
+    const char *clsName = class_getName([NSObject class]);
+    Class supClass = class_getSuperclass([NSObject class]);
+    BOOL isMeta = class_isMetaClass([NSObject class]);
+    NSLog(@"\nclsName=%s\n supClass=%@\n isMeta=%d", clsName, supClass, isMeta);
+    id strCls = class_createInstance(Greeting.class, sizeof(unsigned));
+    id obj = [strCls init];
+    NSLog(@"%@", obj);
+}
+
+- (void)testRuntime {
+    const char *name = class_getName([self class]);
+    Class cls = class_getSuperclass([self class]);
+    BOOL meta = class_isMetaClass([self class]);
+    size_t size = class_getInstanceSize([self class]);
+    
+//    const char *view = "view";
+//    Ivar ii = class_getInstanceVariable([self class], view);
+    unsigned int count = 0;
+    Ivar *ivas = class_copyIvarList([self class], &count);
+    for (int i =0; i < count; i++) {
+        Ivar ivar = ivas[i];
+        NSLog(@"ivar=%s", ivar_getName(ivar));
+    }
+    NSLog(@"%s-%@-%d-%zu", name, cls, meta, size);
 }
 
 - (void)testRunLoop {
@@ -80,7 +114,13 @@
 
 - (void)demoTestPush {
     
+    self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    [self.view addSubview:self.textLabel];
+    
     OneViewController *vc = [[OneViewController alloc] init];
+    vc.sendTextBlock = ^(NSString *str) {
+        self.textLabel.text = str;
+    };
     
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -137,6 +177,15 @@
     //    id result = [self.products valueForKeyPath:@"@max.date"];
     Product *p4 = self.products[3];
     [p4 setValue:@"iphone8" forKeyPath:@"name"];
+    
+//    CFRunLoopRef runloop = CFRunLoopGetCurrent();
+//    NSArray *allModels = CFBridgingRelease(CFRunLoopCopyAllModes(runloop));
+//    while (1) {
+//        for (NSString *mode in allModels) {
+//            CFRunLoopRunInMode((CFStringRef)mode, 0.001, false);
+//        }
+//    }
+    
     // 简单的集合运算符
     id names = [self.products valueForKeyPath:@"@max.name"];
     NSLog(@"%@", names);
