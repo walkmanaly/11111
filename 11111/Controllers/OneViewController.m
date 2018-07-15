@@ -33,8 +33,10 @@ typedef void(^testBlock)(void);
         self.sendTextBlock(@"text");
     }
     
+    __weak typeof(self) weakSelf = self;
     self.testB = ^{
-        NSString *strr = self.testStr;
+        NSString *strr = weakSelf.testStr;
+        NSLog(@"%@", strr);
     };
     
 }

@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *iMacs;
 @property (nonatomic, strong) UILabel *textLabel;
 
+@property (nonatomic, strong) Greeting *myGreeting;
 @end
 
 @implementation ViewController
@@ -58,6 +59,7 @@
 //    NSLog(@"hello world");
 
     [self testRuntime1];
+    [self demoRequest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -139,8 +141,8 @@
 - (void)demoRequest {
     [HttpTools getWithParams:@"?name=Nick" successed:^(NSDictionary *successed) {
         NSLog(@"successed%@", successed);
-        Greeting *greet = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
-        NSLog(@"----greet.id=%@, greet.content=%@", greet.id, greet.content);
+        self.myGreeting = [Greeting greetingWithId:successed[@"id"] content:successed[@"content"]];
+        NSLog(@"----greet.id=%@, greet.content=%@", self.myGreeting.id, self.myGreeting.content);
     } failured:^(NSString *failured) {
         NSLog(@"failured%@", failured);
     }];
