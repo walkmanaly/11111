@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */; };
+		017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */; };
 		018BE89320F6E98000002064 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89220F6E98000002064 /* Product.m */; };
 		018BE8A020F7495600002064 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89F20F7495600002064 /* Book.m */; };
 		01A382F620EDE84900E79F52 /* HttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F520EDE84900E79F52 /* HttpTools.m */; };
@@ -25,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		00264D19BBF8231C0B4D1147 /* libPods-11111.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-11111.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		017BDFFA20FE3FC80064403D /* TestRecycleReferanceObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectA.h; sourceTree = "<group>"; };
+		017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectA.m; sourceTree = "<group>"; };
+		017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectB.h; sourceTree = "<group>"; };
+		017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectB.m; sourceTree = "<group>"; };
 		018BE89120F6E98000002064 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		018BE89220F6E98000002064 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		018BE89E20F7495600002064 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 				018BE89220F6E98000002064 /* Product.m */,
 				018BE89E20F7495600002064 /* Book.h */,
 				018BE89F20F7495600002064 /* Book.m */,
+				017BDFFA20FE3FC80064403D /* TestRecycleReferanceObjectA.h */,
+				017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */,
+				017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */,
+				017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -301,8 +311,10 @@
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
 				01A382FD20F4508100E79F52 /* OneViewController.m in Sources */,
+				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
+				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

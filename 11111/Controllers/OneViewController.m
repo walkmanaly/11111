@@ -9,12 +9,18 @@
 #import "OneViewController.h"
 #import "TwoViewController.h"
 
+#import "TestRecycleReferanceObjectA.h"
+#import "TestRecycleReferanceObjectB.h"
+
 typedef void(^testBlock)(void);
 
 @interface OneViewController ()
 
 @property (nonatomic, copy) testBlock testB;
 @property (nonatomic, copy) NSString *testStr;
+
+@property (nonatomic, strong) TestRecycleReferanceObjectA *a;
+@property (nonatomic, strong) TestRecycleReferanceObjectB *b;
 
 @end
 
@@ -24,7 +30,17 @@ typedef void(^testBlock)(void);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testRecycleReferance];
+    [self testRecycleReferance1];
+    
+}
+
+- (void)testRecycleReferance1 {
+    self.a = [[TestRecycleReferanceObjectA alloc] init];
+    self.b = [[TestRecycleReferanceObjectB alloc] init];
+    
+    self.a.objB = self.b;
+    self.b.objA = self.a;
+    
     
 }
 
