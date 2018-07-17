@@ -10,8 +10,15 @@
 
 @class TestRecycleReferanceObjectB;
 
-@interface TestRecycleReferanceObjectA : NSObject
+@interface TestRecycleReferanceObjectA : NSObject {
+    @public
+    NSString *_firstName;
+    NSString *_lastName;
+    @private
+    NSDate *_birthday;
+}
 
 @property (nonatomic, strong) TestRecycleReferanceObjectB *objB;
+@property (nonatomic, copy) NSString *desc;
 
 @end

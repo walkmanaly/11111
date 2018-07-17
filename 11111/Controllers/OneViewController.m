@@ -12,6 +12,8 @@
 #import "TestRecycleReferanceObjectA.h"
 #import "TestRecycleReferanceObjectB.h"
 
+#import <objc/runtime.h>
+
 typedef void(^testBlock)(void);
 
 @interface OneViewController ()
@@ -40,8 +42,12 @@ typedef void(^testBlock)(void);
     
     self.a.objB = self.b;
     self.b.objA = self.a;
-    
-    
+    unsigned int outcount = 0;
+    Ivar *ivars = class_copyIvarList([TestRecycleReferanceObjectA class], &outcount);
+    for (int i = 0; i < outcount; i++) {
+        Ivar ivar = ivars[i];
+        NSLog(@"ivarName====%s", ivar_getName(ivar));
+    }
 }
 
 - (void)testRecycleReferance {
