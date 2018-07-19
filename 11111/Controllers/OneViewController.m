@@ -40,6 +40,9 @@ typedef void(^testBlock)(void);
     self.a = [[TestRecycleReferanceObjectA alloc] init];
     self.b = [[TestRecycleReferanceObjectB alloc] init];
     
+    BOOL on = self.b.isOn; // isOn 是属性on 的getter方法名
+    NSLog(@"on==%d", on);
+    
     self.a.objB = self.b;
     self.b.objA = self.a;
     unsigned int outcount = 0;

@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) TestRecycleReferanceObjectA *objA;
 
+@property (nonatomic, assign, getter=isOn) BOOL on;
+
 @end
