@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */; };
 		017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */; };
+		017BE00321062C350064403D /* ConstValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BE00221062C350064403D /* ConstValueViewController.m */; };
 		018BE89320F6E98000002064 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89220F6E98000002064 /* Product.m */; };
 		018BE8A020F7495600002064 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BE89F20F7495600002064 /* Book.m */; };
 		01A382F620EDE84900E79F52 /* HttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382F520EDE84900E79F52 /* HttpTools.m */; };
@@ -31,6 +32,8 @@
 		017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectA.m; sourceTree = "<group>"; };
 		017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectB.h; sourceTree = "<group>"; };
 		017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectB.m; sourceTree = "<group>"; };
+		017BE00121062C350064403D /* ConstValueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstValueViewController.h; sourceTree = "<group>"; };
+		017BE00221062C350064403D /* ConstValueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstValueViewController.m; sourceTree = "<group>"; };
 		018BE89120F6E98000002064 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		018BE89220F6E98000002064 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		018BE89E20F7495600002064 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		017BDFF720FB885A0064403D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				017BE00021062BFF0064403D /* TestConstValue */,
 				01CD2A2120E487E2004C8FDF /* ViewController.h */,
 				01CD2A2220E487E2004C8FDF /* ViewController.m */,
 				01A382FB20F4508100E79F52 /* OneViewController.h */,
@@ -89,6 +93,15 @@
 			children = (
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		017BE00021062BFF0064403D /* TestConstValue */ = {
+			isa = PBXGroup;
+			children = (
+				017BE00121062C350064403D /* ConstValueViewController.h */,
+				017BE00221062C350064403D /* ConstValueViewController.m */,
+			);
+			path = TestConstValue;
 			sourceTree = "<group>";
 		};
 		01A382F320EDE82400E79F52 /* Tools */ = {
@@ -310,6 +323,7 @@
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
+				017BE00321062C350064403D /* ConstValueViewController.m in Sources */,
 				01A382FD20F4508100E79F52 /* OneViewController.m in Sources */,
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,

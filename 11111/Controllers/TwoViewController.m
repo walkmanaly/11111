@@ -7,6 +7,7 @@
 //
 
 #import "TwoViewController.h"
+#import "ConstValueViewController.h"
 
 @interface TwoViewController ()
 
@@ -18,6 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testConstValue) name:ConstValueViewControllerNotification object:nil];
+}
+
+- (void)testConstValue {
+    NSLog(@"recieve constValue notification");
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    ConstValueViewController *vc = [[ConstValueViewController alloc] init];
+    vc.view.backgroundColor = [UIColor blueColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

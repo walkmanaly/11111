@@ -63,7 +63,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self demoTestPush];
+    [self demoTestPush];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
