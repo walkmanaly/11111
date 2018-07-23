@@ -63,13 +63,36 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self demoTestPush];
+//    [self demoTestPush];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
 //    [self demoRequest];
 //    [self testRuntime];
+    [self testCPointer];
+    
+    int num = 5;
+    // 同c语言，调用函数是值传递，传的是值拷贝
+    [self testValueType:num];
+    NSLog(@"%d", num);
 }
+
+- (void)testValueType:(int)num {
+    num += 10;
+}
+
+- (void)testCPointer {
+    int x = 1, y = 2, z[20];
+    int *ip;                    //
+    ip = &x;
+    y = *ip;                    // 此处*ip == 1
+    *ip = 0;                    // 此处间接访问变量x，并把0赋值给x，x = 0
+    ip = &z[0];
+    NSLog(@"\n&x=%p-------y=%d------x=%d-------&z=%p", ip, y, x, ip);
+    
+}
+
+
 
 - (void)testRuntimeCreateNewClass {
     
