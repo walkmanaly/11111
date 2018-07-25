@@ -17,6 +17,7 @@
 		01A382FD20F4508100E79F52 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382FC20F4508100E79F52 /* OneViewController.m */; };
 		01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830020F4537000E79F52 /* UIViewController+Hack.m */; };
 		01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830320F45A4300E79F52 /* TwoViewController.m */; };
+		01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
 		01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2220E487E2004C8FDF /* ViewController.m */; };
 		01CD2A2620E487E2004C8FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2420E487E2004C8FDF /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 		01A3830020F4537000E79F52 /* UIViewController+Hack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hack.m"; sourceTree = "<group>"; };
 		01A3830220F45A4300E79F52 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		01A3830320F45A4300E79F52 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		01C584692108DD04000174E1 /* HGMAutoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMAutoDictionary.h; sourceTree = "<group>"; };
+		01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMAutoDictionary.m; sourceTree = "<group>"; };
 		01CD2A1B20E487E2004C8FDF /* 11111.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11111.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CD2A1E20E487E2004C8FDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01CD2A1F20E487E2004C8FDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +142,15 @@
 			path = Hack;
 			sourceTree = "<group>";
 		};
+		01C584682108DCA3000174E1 /* MessageForwarding */ = {
+			isa = PBXGroup;
+			children = (
+				01C584692108DD04000174E1 /* HGMAutoDictionary.h */,
+				01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */,
+			);
+			path = MessageForwarding;
+			sourceTree = "<group>";
+		};
 		01CD2A1220E487E2004C8FDF = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01C584682108DCA3000174E1 /* MessageForwarding */,
 				017BDFF820FB88850064403D /* Protocol */,
 				017BDFF720FB885A0064403D /* Controllers */,
 				01A382FE20F4533800E79F52 /* Hack */,
@@ -330,6 +343,7 @@
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
+				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

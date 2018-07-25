@@ -9,6 +9,7 @@
 #import "TwoViewController.h"
 #import "ConstValueViewController.h"
 #import <objc/runtime.h>
+#import "HGMAutoDictionary.h"
 
 typedef void(^block)(NSInteger inte);
 
@@ -34,6 +35,10 @@ static void *kAlertBlock = "kAlertBlock";
     [btn addTarget:self action:@selector(aleartviewshow) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
+    HGMAutoDictionary *dict = [[HGMAutoDictionary alloc] init];
+    dict.date = [NSDate dateWithTimeIntervalSince1970:0];
+    dict.name = @"nick";
+    NSLog(@"dict.date=%@,dict.name=%@", dict.date, dict.name);
 }
 
 - (void)aleartviewshow {
