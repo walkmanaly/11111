@@ -8,8 +8,16 @@
 
 #import "TwoViewController.h"
 #import "ConstValueViewController.h"
+#import <objc/runtime.h>
+#import "HGMAutoDictionary.h"
 
-@interface TwoViewController ()
+typedef void(^block)(NSInteger inte);
+
+static void *kAlertBlock = "kAlertBlock";
+
+@interface TwoViewController () <UIAlertViewDelegate>
+
+@property (nonatomic, copy) block myblock;
 
 @end
 
@@ -21,6 +29,46 @@
     self.view.backgroundColor = [UIColor orangeColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testConstValue) name:ConstValueViewControllerNotification object:nil];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    btn.frame = CGRectMake(100, 100, 30, 30);
+    [btn addTarget:self action:@selector(aleartviewshow) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    HGMAutoDictionary *dict = [[HGMAutoDictionary alloc] init];
+    dict.date = [NSDate dateWithTimeIntervalSince1970:0];
+    dict.name = @"nick";
+    NSLog(@"dict.date=%@,dict.name=%@", dict.date, dict.name);
+}
+
+- (void)aleartviewshow {
+    UIAlertView *aleart = [[UIAlertView alloc] initWithTitle:@"question" message:@"make your choice" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"dosomething", nil];
+    
+    void (^alertBlock)(NSInteger) = ^(NSInteger index) {
+        if (index == 0) {
+            [self cancel];
+        } else if (index == 1) {
+            [self dosomething];
+        }
+    };
+    
+    objc_setAssociatedObject(aleart, kAlertBlock, alertBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    [aleart show];
+}
+
+- (void)cancel {
+    NSLog(@"cancel");
+}
+
+- (void)dosomething {
+    NSLog(@"dosomething");
+}
+
+#pragma alertview delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    void(^alertBlock)(NSInteger) = objc_getAssociatedObject(alertView, kAlertBlock);
+    alertBlock(buttonIndex);
 }
 
 - (void)testConstValue {

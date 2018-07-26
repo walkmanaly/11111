@@ -12,6 +12,7 @@ NSString *const ConstValueViewControllerNotification = @"ConstValueViewControlle
 
 // 用static const 在实现文件声明不变常亮，替代#define预处理命令
 static const NSTimeInterval kAnimationDuration = 0.5;
+static const NSString *kIdentifier = @"reusecell";
 
 @interface ConstValueViewController ()
 
