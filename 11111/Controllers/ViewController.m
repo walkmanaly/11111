@@ -14,6 +14,7 @@
 #import <objc/runtime.h>
 #import "Book.h"
 #import "AssociatedObjects/AssociatedObjectViewController.h"
+#import "HGMRunloopViewController.h"
 
 @interface ViewController ()
 
@@ -61,6 +62,7 @@
 
     [self testRuntime1];
     [self demoRequest];
+    [self pushToHGMRunloopViewController];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -77,6 +79,11 @@
     // 同c语言，调用函数是值传递，传的是值拷贝
     [self testValueType:num];
     NSLog(@"%d", num);
+}
+
+- (void)pushToHGMRunloopViewController {
+    HGMRunloopViewController *vc = [[HGMRunloopViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)pushAssociatedObjectViewController {
