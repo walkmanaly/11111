@@ -51,7 +51,7 @@ static void *kAlertBlock = "kAlertBlock";
             [self dosomething];
         }
     };
-    
+    // 运行时添加block属性，此处作用是让警告弹框的逻辑更紧密，不用再在相关代理方法里面查找这部分逻辑
     objc_setAssociatedObject(aleart, kAlertBlock, alertBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     [aleart show];

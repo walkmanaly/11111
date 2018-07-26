@@ -15,6 +15,7 @@
 #import "Book.h"
 #import "AssociatedObjects/AssociatedObjectViewController.h"
 #import "HGMRunloopViewController.h"
+#import "NSString+HGMMethodSwizzling.h"
 
 @interface ViewController ()
 
@@ -62,7 +63,8 @@
 
     [self testRuntime1];
     [self demoRequest];
-    [self pushToHGMRunloopViewController];
+//    [self pushToHGMRunloopViewController];
+    [self testMethodSwizzling];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -79,6 +81,13 @@
     // 同c语言，调用函数是值传递，传的是值拷贝
     [self testValueType:num];
     NSLog(@"%d", num);
+}
+
+- (void)testMethodSwizzling {
+//    NSString *myStr = [[NSString stringWithFormat:@"hello"] uppercaseString];
+//    NSLog(@"%@", myStr);
+//    myStr = [myStr uppercaseString];
+//    NSLog(@"");
 }
 
 - (void)pushToHGMRunloopViewController {
