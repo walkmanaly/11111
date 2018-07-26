@@ -13,6 +13,7 @@
 #import "OneViewController.h"
 #import <objc/runtime.h>
 #import "Book.h"
+#import "AssociatedObjects/AssociatedObjectViewController.h"
 
 @interface ViewController ()
 
@@ -63,7 +64,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self demoTestPush];
+//    [self demoTestPush];
+    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
@@ -75,6 +77,12 @@
     // 同c语言，调用函数是值传递，传的是值拷贝
     [self testValueType:num];
     NSLog(@"%d", num);
+}
+
+- (void)pushAssociatedObjectViewController {
+    AssociatedObjectViewController *vc = [[AssociatedObjectViewController alloc] init];
+    vc.view.backgroundColor = [UIColor purpleColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testValueType:(int)num {

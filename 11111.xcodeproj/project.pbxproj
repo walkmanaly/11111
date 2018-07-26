@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013CE5F92107019E0078434C /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 013CE5F82107019E0078434C /* NSObject+AssociatedObjects.m */; };
+		013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013CE5FB210703420078434C /* AssociatedObjectViewController.m */; };
 		017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */; };
 		017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */; };
 		017BE00321062C350064403D /* ConstValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BE00221062C350064403D /* ConstValueViewController.m */; };
@@ -28,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		00264D19BBF8231C0B4D1147 /* libPods-11111.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-11111.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		013CE5F72107019E0078434C /* NSObject+AssociatedObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObjects.h"; sourceTree = "<group>"; };
+		013CE5F82107019E0078434C /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
+		013CE5FA210703420078434C /* AssociatedObjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociatedObjectViewController.h; sourceTree = "<group>"; };
+		013CE5FB210703420078434C /* AssociatedObjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociatedObjectViewController.m; sourceTree = "<group>"; };
 		017BDFFA20FE3FC80064403D /* TestRecycleReferanceObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectA.h; sourceTree = "<group>"; };
 		017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectA.m; sourceTree = "<group>"; };
 		017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectB.h; sourceTree = "<group>"; };
@@ -74,9 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013CE5F62107017A0078434C /* AssociatedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				013CE5F72107019E0078434C /* NSObject+AssociatedObjects.h */,
+				013CE5F82107019E0078434C /* NSObject+AssociatedObjects.m */,
+				013CE5FA210703420078434C /* AssociatedObjectViewController.h */,
+				013CE5FB210703420078434C /* AssociatedObjectViewController.m */,
+			);
+			path = AssociatedObjects;
+			sourceTree = "<group>";
+		};
 		017BDFF720FB885A0064403D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				013CE5F62107017A0078434C /* AssociatedObjects */,
 				017BE00021062BFF0064403D /* TestConstValue */,
 				01CD2A2120E487E2004C8FDF /* ViewController.h */,
 				01CD2A2220E487E2004C8FDF /* ViewController.m */,
@@ -321,6 +339,7 @@
 				01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */,
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
+				013CE5F92107019E0078434C /* NSObject+AssociatedObjects.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
 				017BE00321062C350064403D /* ConstValueViewController.m in Sources */,
@@ -328,6 +347,7 @@
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
+				013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 			);
