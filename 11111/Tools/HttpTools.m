@@ -21,17 +21,12 @@
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseurl]];
     manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
-
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     [manager GET:@"/greeting?name=Nick" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//        successed(response);
         NSDictionary *serializationDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-//        NSLog(@"%@", serializationDict);
         successed(serializationDict);
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString *errorStr = NSStringFromClass([NSError class]);
         failured(errorStr);
@@ -51,7 +46,21 @@
     }];
     
     [session resume];
+}
+
++ (void)getWithParams:(NSString *)params completionhandler:(NetworkCompletionhandler)handler {
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseurl]];
+    manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
+    [manager GET:@"/greeting?name=Nick" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *serializationDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+        handler(serializationDict, nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        handler(nil, error);
+    }];
 }
 
 @end

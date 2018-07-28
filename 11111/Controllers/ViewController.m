@@ -201,6 +201,21 @@
 //    }];
 }
 
+- (void)demoHandlerRequest {
+    [HttpTools getWithParams:@"?name=Nick" completionhandler:^(NSDictionary *data, NSError *error) {
+        // 出错处理
+        if (error) {
+            NSLog(@"error occur");
+            return ;
+        }
+        
+        // 解析数据
+        self.myGreeting = [Greeting greetingWithId:data[@"id"] content:data[@"content"]];
+        NSLog(@"----greet.id=%@, greet.content=%@", self.myGreeting.id, self.myGreeting.content);
+        
+    }];
+}
+
 - (void)demoNsoperation {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
