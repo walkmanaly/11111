@@ -61,26 +61,68 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    NSLog(@"hello world");
 
-    [self testRuntime1];
-    [self demoRequest];
+//    [self testRuntime1];
+//    [self demoRequest];
 //    [self pushToHGMRunloopViewController];
-    [self testMethodSwizzling];
+//    [self testMethodSwizzling];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self demoTestPush];
-    [self pushAssociatedObjectViewController];
+//    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
 //    [self demoRequest];
 //    [self testRuntime];
-    [self testCPointer];
+//    [self testCPointer];
     
-    int num = 5;
-    // 同c语言，调用函数是值传递，传的是值拷贝
-    [self testValueType:num];
-    NSLog(@"%d", num);
+//    int num = 5;
+//    // 同c语言，调用函数是值传递，传的是值拷贝
+//    [self testValueType:num];
+//    NSLog(@"%d", num);
+    
+    
+    [self testNSOperationObject];
+}
+
+- (void)testNSOperationObject {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    queue.name = @"com.cn.nick.operationQueue";
+    
+    NSBlockOperation *op1 = [[NSBlockOperation alloc] init];
+    __weak typeof(op1) weakOp1 = op1;
+    [op1 addExecutionBlock:^{
+        for (int i = 0 ; i < 10; i++) {
+            NSLog(@"%d", i);
+            if (i == 5) {
+//                [queue cancelAllOperations];
+                [weakOp1 cancel];
+                NSLog(@"%@", queue.name);
+                break;
+            }
+        }
+    }];
+    
+//    op1.isCancelled
+    [queue addOperation:op1];
+    
+    [op1 addObserver:self forKeyPath:@"isExecuting" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [op1 addObserver:self forKeyPath:@"isFinished" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [op1 addObserver:self forKeyPath:@"isCancelled" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"isExecuting"]) {
+        NSLog(@"isExecuting...");
+    }
+    if ([keyPath isEqualToString:@"isFinished"]) {
+        NSLog(@"isFinished");
+    }
+    if ([keyPath isEqualToString:@"isCancelled"]) {
+        NSLog(@"isCancelled");
+    }
 }
 
 - (void)testMethodSwizzling {
@@ -288,6 +330,12 @@
     
     Book *unarch = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     NSLog(@"%@", unarch);
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"isExecuting"];
+    [self removeObserver:self forKeyPath:@"isFinished"];
+    [self removeObserver:self forKeyPath:@"isCancelled"];
 }
 
 @end
