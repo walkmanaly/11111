@@ -82,7 +82,6 @@
 //    [self testValueType:num];
 //    NSLog(@"%d", num);
     
-    
     [self testNSOperationObject];
 }
 
@@ -110,6 +109,36 @@
     [op1 addObserver:self forKeyPath:@"isExecuting" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     [op1 addObserver:self forKeyPath:@"isFinished" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     [op1 addObserver:self forKeyPath:@"isCancelled" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    
+    
+    
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:3];
+        NSLog(@"11");
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"22");
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"33");
+    });
+    dispatch_group_enter(group);
+    dispatch_group_leave(group);
+    
+    // 会阻塞线程，等组里所有任务执行完再往下走
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    // 阻力所有任务都执行完后收到通知,一般回到主线程执行block里e的任务
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"group task all done");
+    });
+    
+    // 反复执行block里面的代码，根据传入的次数，此处：5
+    dispatch_apply(5, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t i) {
+        NSLog(@"iii%zu", i);
+    });
     
 }
 
