@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		013CE5F92107019E0078434C /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 013CE5F82107019E0078434C /* NSObject+AssociatedObjects.m */; };
 		013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013CE5FB210703420078434C /* AssociatedObjectViewController.m */; };
+		0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */; };
+		0171E5DA211001580033688F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5D9211001580033688F /* timg.jpeg */; };
+		0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */; };
 		017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */; };
 		017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */; };
 		017BE00321062C350064403D /* ConstValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BE00221062C350064403D /* ConstValueViewController.m */; };
@@ -37,6 +40,10 @@
 		013CE5F82107019E0078434C /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
 		013CE5FA210703420078434C /* AssociatedObjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociatedObjectViewController.h; sourceTree = "<group>"; };
 		013CE5FB210703420078434C /* AssociatedObjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociatedObjectViewController.m; sourceTree = "<group>"; };
+		0171E5D5210FFFA40033688F /* HGMCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCoreImageViewController.h; sourceTree = "<group>"; };
+		0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCoreImageViewController.m; sourceTree = "<group>"; };
+		0171E5D9211001580033688F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "GodfreyKneller-IsaacNewton-1689.jpg"; sourceTree = "<group>"; };
 		017BDFFA20FE3FC80064403D /* TestRecycleReferanceObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectA.h; sourceTree = "<group>"; };
 		017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectA.m; sourceTree = "<group>"; };
 		017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectB.h; sourceTree = "<group>"; };
@@ -98,6 +105,22 @@
 				013CE5FB210703420078434C /* AssociatedObjectViewController.m */,
 			);
 			path = AssociatedObjects;
+			sourceTree = "<group>";
+		};
+		0171E5D4210FFF790033688F /* CoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				0171E5D5210FFFA40033688F /* HGMCoreImageViewController.h */,
+				0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */,
+			);
+			path = CoreImage;
+			sourceTree = "<group>";
+		};
+		0171E5D82110012D0033688F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		017BDFF720FB885A0064403D /* Controllers */ = {
@@ -205,6 +228,8 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				0171E5D82110012D0033688F /* Resource */,
+				0171E5D4210FFF790033688F /* CoreImage */,
 				01C5846F210BF08C000174E1 /* ACAccount */,
 				01F5D8BA2109782B00F2E46C /* Runloop */,
 				01C584682108DCA3000174E1 /* MessageForwarding */,
@@ -220,6 +245,8 @@
 				01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */,
 				01CD2A2C20E487E4004C8FDF /* Info.plist */,
 				01CD2A2D20E487E4004C8FDF /* main.m */,
+				0171E5D9211001580033688F /* timg.jpeg */,
+				0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */,
 			);
 			path = 11111;
 			sourceTree = "<group>";
@@ -312,6 +339,8 @@
 			files = (
 				01CD2A2B20E487E4004C8FDF /* LaunchScreen.storyboard in Resources */,
 				01CD2A2820E487E4004C8FDF /* Assets.xcassets in Resources */,
+				0171E5DA211001580033688F /* timg.jpeg in Resources */,
+				0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */,
 				01CD2A2620E487E2004C8FDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +421,7 @@
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
+				0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
