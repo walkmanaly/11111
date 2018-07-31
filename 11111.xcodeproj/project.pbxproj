@@ -33,6 +33,7 @@
 		01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */; };
 		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
 		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
+		01FF29522110AE100045F73C /* HGMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29512110AE100045F73C /* HGMStudent.m */; };
 		88C0485292B15D7938ADAD0C /* libPods-11111.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00264D19BBF8231C0B4D1147 /* libPods-11111.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		01FF294B2110ACF80045F73C /* HGMPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMPerson.m; sourceTree = "<group>"; };
 		01FF294D2110AD340045F73C /* HGMPerson+load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HGMPerson+load.h"; sourceTree = "<group>"; };
 		01FF294E2110AD340045F73C /* HGMPerson+load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMPerson+load.m"; sourceTree = "<group>"; };
+		01FF29502110AE100045F73C /* HGMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMStudent.h; sourceTree = "<group>"; };
+		01FF29512110AE100045F73C /* HGMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMStudent.m; sourceTree = "<group>"; };
 		34BA4B78CEA4E4CEAB810C31 /* Pods-11111.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.release.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.release.xcconfig"; sourceTree = "<group>"; };
 		AAEB3AE29718A1E60F20BA2C /* Pods-11111.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.debug.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +277,8 @@
 				01FF294B2110ACF80045F73C /* HGMPerson.m */,
 				01FF294D2110AD340045F73C /* HGMPerson+load.h */,
 				01FF294E2110AD340045F73C /* HGMPerson+load.m */,
+				01FF29502110AE100045F73C /* HGMStudent.h */,
+				01FF29512110AE100045F73C /* HGMStudent.m */,
 			);
 			path = TestLoad;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
+				01FF29522110AE100045F73C /* HGMStudent.m in Sources */,
 				017BE00321062C350064403D /* ConstValueViewController.m in Sources */,
 				01A382FD20F4508100E79F52 /* OneViewController.m in Sources */,
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
