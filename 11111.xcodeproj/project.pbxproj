@@ -31,6 +31,8 @@
 		01CD2A2B20E487E4004C8FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */; };
 		01CD2A2E20E487E4004C8FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2D20E487E4004C8FDF /* main.m */; };
 		01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */; };
+		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
+		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
 		88C0485292B15D7938ADAD0C /* libPods-11111.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00264D19BBF8231C0B4D1147 /* libPods-11111.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,10 @@
 		01CD2A2D20E487E4004C8FDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01F5D8BB2109784800F2E46C /* HGMRunloopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMRunloopViewController.h; sourceTree = "<group>"; };
 		01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMRunloopViewController.m; sourceTree = "<group>"; };
+		01FF294A2110ACF80045F73C /* HGMPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMPerson.h; sourceTree = "<group>"; };
+		01FF294B2110ACF80045F73C /* HGMPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMPerson.m; sourceTree = "<group>"; };
+		01FF294D2110AD340045F73C /* HGMPerson+load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HGMPerson+load.h"; sourceTree = "<group>"; };
+		01FF294E2110AD340045F73C /* HGMPerson+load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMPerson+load.m"; sourceTree = "<group>"; };
 		34BA4B78CEA4E4CEAB810C31 /* Pods-11111.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.release.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.release.xcconfig"; sourceTree = "<group>"; };
 		AAEB3AE29718A1E60F20BA2C /* Pods-11111.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.debug.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +234,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01FF29492110ACDF0045F73C /* TestLoad */,
 				0171E5D82110012D0033688F /* Resource */,
 				0171E5D4210FFF790033688F /* CoreImage */,
 				01C5846F210BF08C000174E1 /* ACAccount */,
@@ -258,6 +265,17 @@
 				01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */,
 			);
 			path = Runloop;
+			sourceTree = "<group>";
+		};
+		01FF29492110ACDF0045F73C /* TestLoad */ = {
+			isa = PBXGroup;
+			children = (
+				01FF294A2110ACF80045F73C /* HGMPerson.h */,
+				01FF294B2110ACF80045F73C /* HGMPerson.m */,
+				01FF294D2110AD340045F73C /* HGMPerson+load.h */,
+				01FF294E2110AD340045F73C /* HGMPerson+load.m */,
+			);
+			path = TestLoad;
 			sourceTree = "<group>";
 		};
 		7CA7784F9B5F36ECA7E6AFF9 /* Pods */ = {
@@ -408,6 +426,7 @@
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
 				013CE5F92107019E0078434C /* NSObject+AssociatedObjects.m in Sources */,
+				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
 				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */,
@@ -417,6 +436,7 @@
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
+				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
 				013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
