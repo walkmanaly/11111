@@ -12,6 +12,7 @@
 		0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */; };
 		0171E5DA211001580033688F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5D9211001580033688F /* timg.jpeg */; };
 		0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */; };
+		0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5DF211140CD0033688F /* HGMBridgeViewController.m */; };
 		017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */; };
 		017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BDFFE20FE3FD40064403D /* TestRecycleReferanceObjectB.m */; };
 		017BE00321062C350064403D /* ConstValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017BE00221062C350064403D /* ConstValueViewController.m */; };
@@ -47,6 +48,8 @@
 		0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCoreImageViewController.m; sourceTree = "<group>"; };
 		0171E5D9211001580033688F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "GodfreyKneller-IsaacNewton-1689.jpg"; sourceTree = "<group>"; };
+		0171E5DE211140CD0033688F /* HGMBridgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMBridgeViewController.h; sourceTree = "<group>"; };
+		0171E5DF211140CD0033688F /* HGMBridgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMBridgeViewController.m; sourceTree = "<group>"; };
 		017BDFFA20FE3FC80064403D /* TestRecycleReferanceObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectA.h; sourceTree = "<group>"; };
 		017BDFFB20FE3FC80064403D /* TestRecycleReferanceObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRecycleReferanceObjectA.m; sourceTree = "<group>"; };
 		017BDFFD20FE3FD40064403D /* TestRecycleReferanceObjectB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRecycleReferanceObjectB.h; sourceTree = "<group>"; };
@@ -132,6 +135,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		0171E5DD2111405D0033688F /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				0171E5DE211140CD0033688F /* HGMBridgeViewController.h */,
+				0171E5DF211140CD0033688F /* HGMBridgeViewController.m */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		017BDFF720FB885A0064403D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,13 +157,6 @@
 				01A3830320F45A4300E79F52 /* TwoViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		017BDFF820FB88850064403D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		017BE00021062BFF0064403D /* TestConstValue */ = {
@@ -209,13 +214,6 @@
 			path = MessageForwarding;
 			sourceTree = "<group>";
 		};
-		01C5846F210BF08C000174E1 /* ACAccount */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ACAccount;
-			sourceTree = "<group>";
-		};
 		01CD2A1220E487E2004C8FDF = {
 			isa = PBXGroup;
 			children = (
@@ -237,13 +235,12 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
-				01FF29492110ACDF0045F73C /* TestLoad */,
+				0171E5DD2111405D0033688F /* Bridge */,
+				01FF29492110ACDF0045F73C /* TestLoadMethod */,
 				0171E5D82110012D0033688F /* Resource */,
 				0171E5D4210FFF790033688F /* CoreImage */,
-				01C5846F210BF08C000174E1 /* ACAccount */,
 				01F5D8BA2109782B00F2E46C /* Runloop */,
 				01C584682108DCA3000174E1 /* MessageForwarding */,
-				017BDFF820FB88850064403D /* Protocol */,
 				017BDFF720FB885A0064403D /* Controllers */,
 				01A382FE20F4533800E79F52 /* Hack */,
 				01A382F720EDF1B100E79F52 /* DataModel */,
@@ -270,7 +267,7 @@
 			path = Runloop;
 			sourceTree = "<group>";
 		};
-		01FF29492110ACDF0045F73C /* TestLoad */ = {
+		01FF29492110ACDF0045F73C /* TestLoadMethod */ = {
 			isa = PBXGroup;
 			children = (
 				01FF294A2110ACF80045F73C /* HGMPerson.h */,
@@ -280,7 +277,7 @@
 				01FF29502110AE100045F73C /* HGMStudent.h */,
 				01FF29512110AE100045F73C /* HGMStudent.m */,
 			);
-			path = TestLoad;
+			path = TestLoadMethod;
 			sourceTree = "<group>";
 		};
 		7CA7784F9B5F36ECA7E6AFF9 /* Pods */ = {
@@ -444,6 +441,7 @@
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
 				013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */,
+				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
