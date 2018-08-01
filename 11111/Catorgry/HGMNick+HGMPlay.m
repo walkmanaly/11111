@@ -10,15 +10,15 @@
 
 @implementation HGMNick (HGMPlay)
 
-- (void)watchMovie {
+- (void)hgm_watchMovie {
     
 }
 
-- (void)playFootball {
+- (void)hgm_playFootball {
     
 }
 
-- (void)shopping {
+- (void)hgm_shopping {
     
 }
 

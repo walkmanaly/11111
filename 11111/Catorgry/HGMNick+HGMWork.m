@@ -10,15 +10,15 @@
 
 @implementation HGMNick (HGMWork)
 
-- (void)coding {
+- (void)hgm_coding {
     
 }
 
-- (void)debugging {
+- (void)hgm_debugging {
     
 }
 
-- (void)testting {
+- (void)hgm_testting {
     
 }
 

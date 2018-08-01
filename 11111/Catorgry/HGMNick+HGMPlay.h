@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGMNick (HGMPlay)
 
-- (void)watchMovie;
-- (void)playFootball;
-- (void)shopping;
+- (void)hgm_watchMovie;
+- (void)hgm_playFootball;
+- (void)hgm_shopping;
 
 @end
 

@@ -10,15 +10,15 @@
 
 @implementation HGMNick (HGMLearn)
 
-- (void)learnEnglish {
+- (void)hgm_learnEnglish {
     
 }
 
-- (void)learnSwift {
+- (void)hgm_learnSwift {
     
 }
 
-- (void)learnNSHipster {
+- (void)hgm_learnNSHipster {
     
 }
 

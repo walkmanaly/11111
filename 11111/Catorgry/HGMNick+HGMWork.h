@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGMNick (HGMWork)
 
-- (void)coding;
-- (void)debugging;
-- (void)testting;
+- (void)hgm_coding;
+- (void)hgm_debugging;
+- (void)hgm_testting;
 
 @end
 
