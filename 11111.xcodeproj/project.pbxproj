@@ -35,8 +35,12 @@
 		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
 		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
 		01FF29522110AE100045F73C /* HGMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29512110AE100045F73C /* HGMStudent.m */; };
-		01FF29562111E9850045F73C /* HGMEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29552111E9850045F73C /* HGMEmployer.m */; };
-		01FF295C2111EB3A0045F73C /* HGMPartimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */; };
+		01FF2962211215F90045F73C /* HGMPartimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF295F211215F80045F73C /* HGMPartimeViewController.m */; };
+		01FF2963211215F90045F73C /* HGMEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF2961211215F90045F73C /* HGMEmployer.m */; };
+		01FF29662112162E0045F73C /* HGMNick.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29652112162E0045F73C /* HGMNick.m */; };
+		01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29682112167C0045F73C /* HGMNick+HGMWork.m */; };
+		01FF296C211216EB0045F73C /* HGMNick+HGMPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF296B211216EB0045F73C /* HGMNick+HGMPlay.m */; };
+		01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF296E211217630045F73C /* HGMNick+HGMLearn.m */; };
 		88C0485292B15D7938ADAD0C /* libPods-11111.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00264D19BBF8231C0B4D1147 /* libPods-11111.a */; };
 /* End PBXBuildFile section */
 
@@ -94,10 +98,18 @@
 		01FF294E2110AD340045F73C /* HGMPerson+load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMPerson+load.m"; sourceTree = "<group>"; };
 		01FF29502110AE100045F73C /* HGMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMStudent.h; sourceTree = "<group>"; };
 		01FF29512110AE100045F73C /* HGMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMStudent.m; sourceTree = "<group>"; };
-		01FF29542111E9850045F73C /* HGMEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMEmployer.h; sourceTree = "<group>"; };
-		01FF29552111E9850045F73C /* HGMEmployer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMEmployer.m; sourceTree = "<group>"; };
-		01FF295A2111EB3A0045F73C /* HGMPartimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMPartimeViewController.h; sourceTree = "<group>"; };
-		01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMPartimeViewController.m; sourceTree = "<group>"; };
+		01FF295E211215F80045F73C /* HGMEmployer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGMEmployer.h; path = 11111/Protocol/HGMEmployer.h; sourceTree = SOURCE_ROOT; };
+		01FF295F211215F80045F73C /* HGMPartimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGMPartimeViewController.m; path = 11111/Protocol/HGMPartimeViewController.m; sourceTree = SOURCE_ROOT; };
+		01FF2960211215F90045F73C /* HGMPartimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGMPartimeViewController.h; path = 11111/Protocol/HGMPartimeViewController.h; sourceTree = SOURCE_ROOT; };
+		01FF2961211215F90045F73C /* HGMEmployer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGMEmployer.m; path = 11111/Protocol/HGMEmployer.m; sourceTree = SOURCE_ROOT; };
+		01FF29642112162E0045F73C /* HGMNick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMNick.h; sourceTree = "<group>"; };
+		01FF29652112162E0045F73C /* HGMNick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMNick.m; sourceTree = "<group>"; };
+		01FF29672112167C0045F73C /* HGMNick+HGMWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HGMNick+HGMWork.h"; sourceTree = "<group>"; };
+		01FF29682112167C0045F73C /* HGMNick+HGMWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMNick+HGMWork.m"; sourceTree = "<group>"; };
+		01FF296A211216EB0045F73C /* HGMNick+HGMPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HGMNick+HGMPlay.h"; sourceTree = "<group>"; };
+		01FF296B211216EB0045F73C /* HGMNick+HGMPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMNick+HGMPlay.m"; sourceTree = "<group>"; };
+		01FF296D211217630045F73C /* HGMNick+HGMLearn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HGMNick+HGMLearn.h"; sourceTree = "<group>"; };
+		01FF296E211217630045F73C /* HGMNick+HGMLearn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMNick+HGMLearn.m"; sourceTree = "<group>"; };
 		34BA4B78CEA4E4CEAB810C31 /* Pods-11111.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.release.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.release.xcconfig"; sourceTree = "<group>"; };
 		AAEB3AE29718A1E60F20BA2C /* Pods-11111.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.debug.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +253,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01FF295D211215830045F73C /* Catorgry */,
 				01FF29532111E8920045F73C /* Protocol */,
 				0171E5DD2111405D0033688F /* Bridge */,
 				01FF29492110ACDF0045F73C /* TestLoadMethod */,
@@ -290,13 +303,28 @@
 		01FF29532111E8920045F73C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				01FF29542111E9850045F73C /* HGMEmployer.h */,
-				01FF29552111E9850045F73C /* HGMEmployer.m */,
-				01FF295A2111EB3A0045F73C /* HGMPartimeViewController.h */,
-				01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */,
+				01FF295E211215F80045F73C /* HGMEmployer.h */,
+				01FF2961211215F90045F73C /* HGMEmployer.m */,
+				01FF2960211215F90045F73C /* HGMPartimeViewController.h */,
+				01FF295F211215F80045F73C /* HGMPartimeViewController.m */,
 			);
 			name = Protocol;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		01FF295D211215830045F73C /* Catorgry */ = {
+			isa = PBXGroup;
+			children = (
+				01FF29642112162E0045F73C /* HGMNick.h */,
+				01FF29652112162E0045F73C /* HGMNick.m */,
+				01FF29672112167C0045F73C /* HGMNick+HGMWork.h */,
+				01FF29682112167C0045F73C /* HGMNick+HGMWork.m */,
+				01FF296A211216EB0045F73C /* HGMNick+HGMPlay.h */,
+				01FF296B211216EB0045F73C /* HGMNick+HGMPlay.m */,
+				01FF296D211217630045F73C /* HGMNick+HGMLearn.h */,
+				01FF296E211217630045F73C /* HGMNick+HGMLearn.m */,
+			);
+			path = Catorgry;
 			sourceTree = "<group>";
 		};
 		7CA7784F9B5F36ECA7E6AFF9 /* Pods */ = {
@@ -445,9 +473,13 @@
 			files = (
 				018BE8A020F7495600002064 /* Book.m in Sources */,
 				01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */,
+				01FF296C211216EB0045F73C /* HGMNick+HGMPlay.m in Sources */,
+				01FF2962211215F90045F73C /* HGMPartimeViewController.m in Sources */,
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
 				013CE5F92107019E0078434C /* NSObject+AssociatedObjects.m in Sources */,
+				01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */,
+				01FF2963211215F90045F73C /* HGMEmployer.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
 				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
@@ -458,13 +490,13 @@
 				01A382FD20F4508100E79F52 /* OneViewController.m in Sources */,
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
+				01FF29662112162E0045F73C /* HGMNick.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
-				01FF29562111E9850045F73C /* HGMEmployer.m in Sources */,
 				013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */,
-				01FF295C2111EB3A0045F73C /* HGMPartimeViewController.m in Sources */,
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
+				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
 				0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */,
