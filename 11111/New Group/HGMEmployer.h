@@ -12,6 +12,8 @@
 
 @optional
 - (void)employerHireMembers;
+- (void)employerFireMembers;
+- (void)employerReplaceMembers;
 
 @end
 

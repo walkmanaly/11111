@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor purpleColor];
     [self creatEmployer];
 }
 
@@ -29,5 +30,13 @@
 - (void)employerHireMembers {
     NSLog(@"employerHireMembers");
 }
+
+- (void)employerFireMembers {
+    NSLog(@"employerFireMembers");
+}
+
+//- (void)employerReplaceMembers {
+//    NSLog(@"employerReplaceMembers");
+//}
 
 @end
