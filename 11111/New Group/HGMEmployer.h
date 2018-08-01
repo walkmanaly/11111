@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol HGMEmployerProtocol <NSObject>
+@protocol HGMEmployerDelegate <NSObject>
 
+@optional
 - (void)employerHireMembers;
 
 @end
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGMEmployer : NSObject
 
-@property (nonatomic, weak) id<HGMEmployerProtocol> delegate;
+@property (nonatomic, weak) id<HGMEmployerDelegate> delegate;
 - (void)callDelegate;
 
 @end

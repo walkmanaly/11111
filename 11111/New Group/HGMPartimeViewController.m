@@ -9,7 +9,7 @@
 #import "HGMPartimeViewController.h"
 #import "HGMEmployer.h"
 
-@interface HGMPartimeViewController () <HGMEmployerProtocol>
+@interface HGMPartimeViewController () <HGMEmployerDelegate>
 
 @end
 
