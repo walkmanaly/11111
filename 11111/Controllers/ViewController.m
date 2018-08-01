@@ -16,6 +16,7 @@
 #import "AssociatedObjects/AssociatedObjectViewController.h"
 #import "HGMRunloopViewController.h"
 #import "NSString+HGMMethodSwizzling.h"
+#import "HGMPartimeViewController.h"
 
 @interface ViewController ()
 
@@ -82,7 +83,13 @@
 //    [self testValueType:num];
 //    NSLog(@"%d", num);
     
-    [self testNSOperationObject];
+//    [self testNSOperationObject];
+    [self testProtocol];
+}
+
+- (void)testProtocol {
+    HGMPartimeViewController *vc = [[HGMPartimeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testNSOperationObject {

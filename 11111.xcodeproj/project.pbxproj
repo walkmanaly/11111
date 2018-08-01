@@ -35,6 +35,8 @@
 		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
 		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
 		01FF29522110AE100045F73C /* HGMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29512110AE100045F73C /* HGMStudent.m */; };
+		01FF29562111E9850045F73C /* HGMEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF29552111E9850045F73C /* HGMEmployer.m */; };
+		01FF295C2111EB3A0045F73C /* HGMPartimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */; };
 		88C0485292B15D7938ADAD0C /* libPods-11111.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00264D19BBF8231C0B4D1147 /* libPods-11111.a */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,10 @@
 		01FF294E2110AD340045F73C /* HGMPerson+load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HGMPerson+load.m"; sourceTree = "<group>"; };
 		01FF29502110AE100045F73C /* HGMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMStudent.h; sourceTree = "<group>"; };
 		01FF29512110AE100045F73C /* HGMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMStudent.m; sourceTree = "<group>"; };
+		01FF29542111E9850045F73C /* HGMEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMEmployer.h; sourceTree = "<group>"; };
+		01FF29552111E9850045F73C /* HGMEmployer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMEmployer.m; sourceTree = "<group>"; };
+		01FF295A2111EB3A0045F73C /* HGMPartimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMPartimeViewController.h; sourceTree = "<group>"; };
+		01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMPartimeViewController.m; sourceTree = "<group>"; };
 		34BA4B78CEA4E4CEAB810C31 /* Pods-11111.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.release.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.release.xcconfig"; sourceTree = "<group>"; };
 		AAEB3AE29718A1E60F20BA2C /* Pods-11111.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.debug.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +241,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01FF29532111E8920045F73C /* Protocol */,
 				0171E5DD2111405D0033688F /* Bridge */,
 				01FF29492110ACDF0045F73C /* TestLoadMethod */,
 				0171E5D82110012D0033688F /* Resource */,
@@ -278,6 +285,18 @@
 				01FF29512110AE100045F73C /* HGMStudent.m */,
 			);
 			path = TestLoadMethod;
+			sourceTree = "<group>";
+		};
+		01FF29532111E8920045F73C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01FF29542111E9850045F73C /* HGMEmployer.h */,
+				01FF29552111E9850045F73C /* HGMEmployer.m */,
+				01FF295A2111EB3A0045F73C /* HGMPartimeViewController.h */,
+				01FF295B2111EB3A0045F73C /* HGMPartimeViewController.m */,
+			);
+			name = Protocol;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7CA7784F9B5F36ECA7E6AFF9 /* Pods */ = {
@@ -326,6 +345,7 @@
 		01CD2A1320E487E2004C8FDF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HGM;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = nick;
 				TargetAttributes = {
@@ -440,7 +460,9 @@
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
+				01FF29562111E9850045F73C /* HGMEmployer.m in Sources */,
 				013CE5FC210703420078434C /* AssociatedObjectViewController.m in Sources */,
+				01FF295C2111EB3A0045F73C /* HGMPartimeViewController.m in Sources */,
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
