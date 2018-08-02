@@ -16,9 +16,9 @@
      */
     // 此处只用做 委托者是否实现了某个代理方法 的缓存 (0或1就可以)
     struct {
-        unsigned int didHireEmployee           :1;
-        unsigned int didFireEmployee           :1;
-        unsigned int didReplaceEmployee        :1;
+        unsigned int shouldHireEmployee           :1;
+        unsigned int shouldFireEmployee           :1;
+        unsigned int shouldReplaceEmployee        :1;
     } _delegateFlags;
     
 }
@@ -39,9 +39,9 @@
 // 如果委托者多次调用这些代理方法，那么这种缓存优化很有必要，提高程序性能
 - (void)setDelegate:(id<HGMEmployerDelegate>)delegate {
     _delegate = delegate;
-    _delegateFlags.didHireEmployee = [delegate respondsToSelector:@selector(employerHireMembers)];
-    _delegateFlags.didFireEmployee = [delegate respondsToSelector:@selector(employerFireMembers)];
-    _delegateFlags.didReplaceEmployee = [delegate respondsToSelector:@selector(employerReplaceMembers)];
+    _delegateFlags.shouldHireEmployee = [delegate respondsToSelector:@selector(employerShouldHireMembers)];
+    _delegateFlags.shouldFireEmployee = [delegate respondsToSelector:@selector(employerShouldFireMembers)];
+    _delegateFlags.shouldReplaceEmployee = [delegate respondsToSelector:@selector(employerShouldReplaceMembers)];
 }
 
 - (void)callDelegate {
@@ -49,19 +49,30 @@
 }
 
 - (void)callDelegateDosomething {
-//    if ([self.delegate respondsToSelector:@selector(employerHireMembers)]) {
-//        [self.delegate employerHireMembers];
-//    }
-    if (_delegateFlags.didHireEmployee) {
+    // 委托者只调用一次
+    if ([self.delegate respondsToSelector:@selector(employerHireMembers)]) {
         [self.delegate employerHireMembers];
     }
     
-    if (_delegateFlags.didFireEmployee) {
+    if ([self.delegate respondsToSelector:@selector(employerFireMembers)]) {
         [self.delegate employerFireMembers];
     }
     
-    if (_delegateFlags.didReplaceEmployee) {
+    if ([self.delegate respondsToSelector:@selector(employerReplaceMembers)]) {
         [self.delegate employerReplaceMembers];
+    }
+    
+    // 委托者可能调用多次
+    if (_delegateFlags.shouldHireEmployee) {
+        [self.delegate employerShouldHireMembers];
+    }
+    
+    if (_delegateFlags.shouldFireEmployee) {
+        [self.delegate employerShouldFireMembers];
+    }
+    
+    if (_delegateFlags.shouldReplaceEmployee) {
+        [self.delegate employerShouldReplaceMembers];
     }
 }
 

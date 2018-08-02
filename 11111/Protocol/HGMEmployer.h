@@ -15,6 +15,10 @@
 - (void)employerFireMembers;
 - (void)employerReplaceMembers;
 
+- (void)employerShouldHireMembers;
+- (void)employerShouldFireMembers;
+- (void)employerShouldReplaceMembers;
+
 @end
 
 NS_ASSUME_NONNULL_BEGIN
