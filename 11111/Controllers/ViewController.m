@@ -13,10 +13,11 @@
 #import "OneViewController.h"
 #import <objc/runtime.h>
 #import "Book.h"
-#import "AssociatedObjects/AssociatedObjectViewController.h"
+#import "AssociatedObjectViewController.h"
 #import "HGMRunloopViewController.h"
 #import "NSString+HGMMethodSwizzling.h"
 #import "HGMPartimeViewController.h"
+#import "HGMKVOemplementViewController.h"
 
 @interface ViewController ()
 
@@ -84,7 +85,13 @@
 //    NSLog(@"%d", num);
     
 //    [self testNSOperationObject];
-    [self testProtocol];
+//    [self testProtocol];
+    [self testKVOemplementation];
+}
+
+- (void)testKVOemplementation {
+    HGMKVOemplementViewController *vc = [[HGMKVOemplementViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testProtocol {
