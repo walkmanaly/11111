@@ -46,4 +46,19 @@
     return self;
 }
 
+
+// 第17条
+- (NSString *)description {
+    // 以字符串打印---类的描述可能不需要指针和类型
+    return [NSString stringWithFormat:@"\"%f %f %@\"", self.width, self.height, _name];
+}
+
+- (NSString *)debugDescription {
+    // 以字典打印---在debug的时候可能需要知道指针和类型~
+    return [NSString stringWithFormat:@"<%@:%p, \"%@\">", [self class], self, @{@"width": @(self.width),
+                                                                                @"height": @(self.height),
+                                                                                @"name": _name
+                                                                                }];
+}
+
 @end
