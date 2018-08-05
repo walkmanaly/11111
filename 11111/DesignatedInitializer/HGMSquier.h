@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGMSquier : HGMRetangle
 
+@property (nonatomic, copy) NSString *name;
 - (instancetype)initWithDemention:(double)demention;
 
 @end

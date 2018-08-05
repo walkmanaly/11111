@@ -14,10 +14,36 @@
     return [super initWithWidth:demention height:demention];
 }
 
+// ------------------------1----------------------
 // 此处应该覆写父类的init方法
 // 否则会调用父类的init方法，生成的是具有默认值的长方形而不是正方形了。
-- (instancetype)init {
-    return [self initWithDemention:10.0];
+//- (instancetype)init {
+//    return [self initWithDemention:10.0];
+//}
+
+// ------------------------2-------------------------
+// 或者覆写父类的designated initializer方法
+- (instancetype)initWithWidth:(double)width height:(double)height {
+    double demen = MAX(width, height);
+    return [self initWithDemention:demen];
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    // 需要调用父类的encode方法，不然父类的某些值并没有编码
+    // 再编码本类的值
+    // 这样才算完全遵循NSCoding协议(fully NSCoding compliant)
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:_name forKey:@"name"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    // 此处需要调用父类的decoder方法去解码父类中的某些默认值
+    // 再解码本类的值
+    // 这样才算完全遵循NSCoding协议(fully NSCoding compliant)
+    if (self = [super initWithCoder:aDecoder]) {
+        _name = [aDecoder decodeObjectForKey:@"name"];
+    }
+    return self;
 }
 
 @end

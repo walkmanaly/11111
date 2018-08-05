@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HGMRetangle : NSObject
+@interface HGMRetangle : NSObject <NSCoding>
 
 @property (nonatomic, assign, readonly) double width;
 @property (nonatomic, assign, readonly) double height;

@@ -24,4 +24,17 @@
     return [self initWithWidth:10.0 height:5.0];
 }
 
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    [aCoder encodeDouble:_width forKey:@"width"];
+    [aCoder encodeDouble:_height forKey:@"height"];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    if (self = [super init]) {
+        _width = [aDecoder decodeDoubleForKey:@"width"];
+        _height = [aDecoder decodeDoubleForKey:@"height"];
+    }
+    return self;
+}
+
 @end

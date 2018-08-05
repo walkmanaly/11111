@@ -93,11 +93,22 @@
 }
 
 - (void)testDesignatedInitializer {
-    HGMRetangle *rect = [[HGMRetangle alloc] init];
-    NSLog(@"\n%f-%f", rect.width, rect.height);
+//    HGMRetangle *rect = [[HGMRetangle alloc] init];
+//    NSLog(@"\n%f-%f", rect.width, rect.height);
+//
+//    HGMSquier *qure = [[HGMSquier alloc] init];
+//    NSLog(@"\n%f--%f", qure.width, qure.height);
     
-    HGMSquier *qure = [[HGMSquier alloc] init];
-    NSLog(@"\n%f--%f", qure.width, qure.height);
+    HGMSquier  *squre = [[HGMSquier alloc] init];
+    squre.name = @"Nick";
+    
+    NSString *domain = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [NSString stringWithFormat:@"%@%@", domain, @"/file"];
+//    NSURL *pathUrl = [NSURL URLWithString:path];
+    [NSKeyedArchiver archiveRootObject:squre toFile:path];
+    
+    id result = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    NSLog(@"%@", result);
 }
 
 - (void)testKVOemplementation {
