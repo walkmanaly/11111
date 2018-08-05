@@ -53,6 +53,7 @@
     return [NSString stringWithFormat:@"\"%f %f %@\"", self.width, self.height, _name];
 }
 
+// 在控制台输入 po 调试的时候，是返回此方法的描述
 - (NSString *)debugDescription {
     // 以字典打印---在debug的时候可能需要知道指针和类型~
     return [NSString stringWithFormat:@"<%@:%p, \"%@\">", [self class], self, @{@"width": @(self.width),
