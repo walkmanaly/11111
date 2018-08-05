@@ -18,6 +18,8 @@
 #import "NSString+HGMMethodSwizzling.h"
 #import "HGMPartimeViewController.h"
 #import "HGMKVOemplementViewController.h"
+#import "HGMRetangle.h"
+#import "HGMSquier.h"
 
 @interface ViewController ()
 
@@ -86,7 +88,16 @@
     
 //    [self testNSOperationObject];
 //    [self testProtocol];
-    [self testKVOemplementation];
+//    [self testKVOemplementation];
+    [self testDesignatedInitializer];
+}
+
+- (void)testDesignatedInitializer {
+    HGMRetangle *rect = [[HGMRetangle alloc] init];
+    NSLog(@"\n%f-%f", rect.width, rect.height);
+    
+    HGMSquier *qure = [[HGMSquier alloc] init];
+    NSLog(@"\n%f--%f", qure.width, qure.height);
 }
 
 - (void)testKVOemplementation {

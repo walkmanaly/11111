@@ -9,7 +9,7 @@
 #import "HGMValue.h"
 
 typedef struct example {
-    id   anObject;
+//    id   anObject;
     char *aString;
     int  anInt;
 } Example;

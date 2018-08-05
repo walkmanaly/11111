@@ -44,6 +44,8 @@
 		01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF296E211217630045F73C /* HGMNick+HGMLearn.m */; };
 		01FF297321134CC40045F73C /* HGMKVOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF297221134CC40045F73C /* HGMKVOObject.m */; };
 		01FF297621134CE90045F73C /* HGMKVOemplementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF297521134CE90045F73C /* HGMKVOemplementViewController.m */; };
+		01FF297B211736F60045F73C /* HGMRetangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF297A211736F60045F73C /* HGMRetangle.m */; };
+		01FF297E2117397C0045F73C /* HGMSquier.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF297D2117397C0045F73C /* HGMSquier.m */; };
 		88C0485292B15D7938ADAD0C /* libPods-11111.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00264D19BBF8231C0B4D1147 /* libPods-11111.a */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,10 @@
 		01FF297221134CC40045F73C /* HGMKVOObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMKVOObject.m; sourceTree = "<group>"; };
 		01FF297421134CE90045F73C /* HGMKVOemplementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMKVOemplementViewController.h; sourceTree = "<group>"; };
 		01FF297521134CE90045F73C /* HGMKVOemplementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMKVOemplementViewController.m; sourceTree = "<group>"; };
+		01FF2979211736F60045F73C /* HGMRetangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMRetangle.h; sourceTree = "<group>"; };
+		01FF297A211736F60045F73C /* HGMRetangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMRetangle.m; sourceTree = "<group>"; };
+		01FF297C2117397C0045F73C /* HGMSquier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMSquier.h; sourceTree = "<group>"; };
+		01FF297D2117397C0045F73C /* HGMSquier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMSquier.m; sourceTree = "<group>"; };
 		34BA4B78CEA4E4CEAB810C31 /* Pods-11111.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.release.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.release.xcconfig"; sourceTree = "<group>"; };
 		AAEB3AE29718A1E60F20BA2C /* Pods-11111.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11111.debug.xcconfig"; path = "Pods/Target Support Files/Pods-11111/Pods-11111.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -280,6 +286,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01FF2978211736B30045F73C /* DesignatedInitializer */,
 				01FF297021134C920045F73C /* KVOemplement */,
 				0171E5F32112B5180033688F /* NSValue */,
 				0171E5E82112B5020033688F /* AssociatedObjects */,
@@ -355,6 +362,17 @@
 				01FF297521134CE90045F73C /* HGMKVOemplementViewController.m */,
 			);
 			path = KVOemplement;
+			sourceTree = "<group>";
+		};
+		01FF2978211736B30045F73C /* DesignatedInitializer */ = {
+			isa = PBXGroup;
+			children = (
+				01FF2979211736F60045F73C /* HGMRetangle.h */,
+				01FF297A211736F60045F73C /* HGMRetangle.m */,
+				01FF297C2117397C0045F73C /* HGMSquier.h */,
+				01FF297D2117397C0045F73C /* HGMSquier.m */,
+			);
+			path = DesignatedInitializer;
 			sourceTree = "<group>";
 		};
 		7CA7784F9B5F36ECA7E6AFF9 /* Pods */ = {
@@ -512,10 +530,12 @@
 				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				0171E5F62112B5310033688F /* HGMValue.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
+				01FF297E2117397C0045F73C /* HGMSquier.m in Sources */,
 				01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */,
 				01FF297621134CE90045F73C /* HGMKVOemplementViewController.m in Sources */,
 				0171E5F22112B5020033688F /* ConstValueViewController.m in Sources */,
 				0171E5F12112B5020033688F /* AssociatedObjectViewController.m in Sources */,
+				01FF297B211736F60045F73C /* HGMRetangle.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
 				01FF29522110AE100045F73C /* HGMStudent.m in Sources */,
 				0171E5E72112B4B80033688F /* HGMPartimeViewController.m in Sources */,
