@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
+		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */; };
 		0171E5DA211001580033688F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5D9211001580033688F /* timg.jpeg */; };
 		0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */; };
@@ -51,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		00264D19BBF8231C0B4D1147 /* libPods-11111.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-11111.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		010D90F22117EB770026B185 /* NSObject+HGMGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HGMGuard.h"; sourceTree = "<group>"; };
+		010D90F32117EB770026B185 /* NSObject+HGMGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HGMGuard.m"; sourceTree = "<group>"; };
+		010D90F52117F0470026B185 /* HGMDeallocBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDeallocBlockViewController.h; sourceTree = "<group>"; };
+		010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDeallocBlockViewController.m; sourceTree = "<group>"; };
 		0171E5D5210FFFA40033688F /* HGMCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCoreImageViewController.h; sourceTree = "<group>"; };
 		0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCoreImageViewController.m; sourceTree = "<group>"; };
 		0171E5D9211001580033688F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
@@ -141,6 +147,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010D90F12117EB520026B185 /* DeallocBlock */ = {
+			isa = PBXGroup;
+			children = (
+				010D90F22117EB770026B185 /* NSObject+HGMGuard.h */,
+				010D90F32117EB770026B185 /* NSObject+HGMGuard.m */,
+				010D90F52117F0470026B185 /* HGMDeallocBlockViewController.h */,
+				010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */,
+			);
+			path = DeallocBlock;
+			sourceTree = "<group>";
+		};
 		0171E5D4210FFF790033688F /* CoreImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +303,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				010D90F12117EB520026B185 /* DeallocBlock */,
 				01FF2978211736B30045F73C /* DesignatedInitializer */,
 				01FF297021134C920045F73C /* KVOemplement */,
 				0171E5F32112B5180033688F /* NSValue */,
@@ -527,6 +545,7 @@
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
 				01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
+				010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */,
 				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				0171E5F62112B5310033688F /* HGMValue.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
@@ -547,6 +566,7 @@
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
+				010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,

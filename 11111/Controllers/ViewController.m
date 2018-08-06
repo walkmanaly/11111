@@ -20,6 +20,7 @@
 #import "HGMKVOemplementViewController.h"
 #import "HGMRetangle.h"
 #import "HGMSquier.h"
+#import "HGMDeallocBlockViewController.h"
 
 @interface ViewController ()
 
@@ -89,7 +90,14 @@
 //    [self testNSOperationObject];
 //    [self testProtocol];
 //    [self testKVOemplementation];
-    [self testDesignatedInitializer];
+//    [self testDesignatedInitializer];
+    [self testDeallocBlock];
+}
+
+- (void)testDeallocBlock {
+    HGMDeallocBlockViewController *vc = [[HGMDeallocBlockViewController alloc] init];
+    vc.view.backgroundColor = [UIColor lightTextColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testDesignatedInitializer {
