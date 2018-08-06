@@ -73,7 +73,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self demoTestPush];
+//    [self demoTestPush];
 //    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
@@ -92,6 +92,14 @@
 //    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
+    [self testPrivateMethod];
+}
+
+- (void)testPrivateMethod {
+    // _resetViewController 是UIviewcontroller的私有方法，不对外公开接口，实际上内部实现了此方法。
+    // 我们在定义私有方法时，避免使用_开头(苹果私有方法默认以_开头)，防止覆写了父类的私有方法，导致该调的父类方法没有执行，产生错误
+    BOOL isResponds = [self respondsToSelector:@selector(_resetViewController)];
+    NSLog(@"isResponds---%d", isResponds);
 }
 
 - (void)testDeallocBlock {
