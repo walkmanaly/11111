@@ -20,7 +20,13 @@
     // Do any additional setup after loading the view.
     // 在对象销毁时调用
     [self addGuardDeallocBlock:^{
-        NSLog(@"deadalloc");
+        NSLog(@"deadalloc dosometing");
+    }];
+    [self addGuardDeallocBlock:^{
+        NSLog(@"deadalloc dosometing twice");
+    }];
+    [self addGuardDeallocBlock:^{
+        NSLog(@"deadalloc dosometing third");
     }];
 }
 
