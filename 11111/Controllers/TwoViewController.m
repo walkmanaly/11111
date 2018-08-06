@@ -78,6 +78,8 @@ static void *kAlertBlock = "kAlertBlock";
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     ConstValueViewController *vc = [[ConstValueViewController alloc] init];
     vc.view.backgroundColor = [UIColor blueColor];
+    NSString *result = NSSringForMechinState(HGMMechinStateNormal);
+    NSLog(@"result=%@", result);
     [self.navigationController pushViewController:vc animated:YES];
 }
 

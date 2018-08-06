@@ -8,10 +8,12 @@
 
 #import "ConstValueViewController.h"
 
+
+
 NSString *const ConstValueViewControllerNotification = @"ConstValueViewControllerNotification";
 
-// 用static const 在实现文件声明不变常亮，替代#define预处理命令
-static const NSTimeInterval kAnimationDuration = 0.5;
+// 用static const 在实现文件声明不变常量，替代#define预处理命令
+static const NSTimeInterval kAnimationDuration = 2;
 static const NSString *kIdentifier = @"reusecell";
 
 @interface ConstValueViewController ()
@@ -25,6 +27,33 @@ static const NSString *kIdentifier = @"reusecell";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:ConstValueViewControllerNotification object:nil];
     });
+    
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 100, 100)];
+    v.backgroundColor = [UIColor blueColor];
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        v.backgroundColor = [UIColor whiteColor];
+    }];
+    [self.view addSubview:v];
+}
+
+NSString *NSSringForMechinState(HGMMechinState state) {
+    switch (state) {
+        case HGMMechinStateNormal:
+            return @"normal";
+            break;
+            
+        case HGMMechinStateSelected:
+            return @"selected";
+            break;
+            
+        case HGMMechinStateDisable:
+            return @"disable";
+            break;
+            
+        default:
+            return nil;
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -12,6 +12,14 @@
 extern NSString *const ConstValueViewControllerNotification;
 extern NSString *const onstValueViewControllerCellIdentifier;
 
+typedef NS_ENUM(NSUInteger, HGMMechinState) {
+    HGMMechinStateNormal,
+    HGMMechinStateSelected,
+    HGMMechinStateDisable,
+};
+
+extern NSString *NSSringForMechinState(HGMMechinState state);
+
 @interface ConstValueViewController : UIViewController
 
 @end

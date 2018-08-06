@@ -73,7 +73,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self demoTestPush];
+    [self demoTestPush];
 //    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
@@ -91,7 +91,7 @@
 //    [self testProtocol];
 //    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
-    [self testDeallocBlock];
+//    [self testDeallocBlock];
 }
 
 - (void)testDeallocBlock {
