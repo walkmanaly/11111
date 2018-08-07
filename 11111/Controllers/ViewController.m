@@ -21,6 +21,7 @@
 #import "HGMRetangle.h"
 #import "HGMSquier.h"
 #import "HGMDeallocBlockViewController.h"
+#import "HGMCopyingPerson.h"
 
 @interface ViewController ()
 
@@ -92,7 +93,30 @@
 //    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
-    [self testPrivateMethod];
+//    [self testPrivateMethod];
+    [self testNSCopying];
+}
+
+- (void)testNSCopying {
+    HGMCopyingPerson *per = [[HGMCopyingPerson alloc] initWithName:@"Nick" age:18];
+    HGMCopyingPerson *rose = [[HGMCopyingPerson alloc] initWithName:@"rose" age:18];
+    HGMCopyingPerson *jack = [[HGMCopyingPerson alloc] initWithName:@"jack" age:20];
+    [per addFriend:rose];
+    NSLog(@"per-%@", per);
+    
+    id perCopy = [per copy];
+    // 拷贝之后在原来的per中添加Jack，拷贝后的perCopy不变（符合预期）
+    [per addFriend:jack];
+    NSLog(@"perCopy-%@", perCopy);
+    
+//    HGMCopyingPerson *mutablePer = [[HGMCopyingPerson alloc] initWithName:@"Nick" age:18];
+//    [mutablePer addFriend:rose];
+//    NSLog(@"mutablePer-%@", mutablePer);
+//
+//    id mutablePerCopy = [mutablePer mutableCopy];
+//    [mutablePer addFriend:jack];
+//    NSLog(@"mutablePerCopy-%@", mutablePerCopy);
+    
 }
 
 - (void)testPrivateMethod {
