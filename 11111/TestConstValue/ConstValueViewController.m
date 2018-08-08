@@ -18,7 +18,7 @@
  如果不用static修饰，编译器会为它创建一个外部符号。如果另个编译单元也声明了同样同名的变量，那么编译器就会抛出上面的错误信息。
  所以在 kDefaultHeight 前加static
  static：修饰符，意味着仅在定义此变量的编译单元中可见。
- 
+ static const :编译器根本不会创建符号，屙屎会像#define一样，把所有遇到的变量都替换为常值。
  */
 static const NSString *kDefaultHeight;
 
