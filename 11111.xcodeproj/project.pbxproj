@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
-		01561B342119EF2300260C00 /* HGMCopyingPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B332119EF2300260C00 /* HGMCopyingPerson.m */; };
 		01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B37211B321C00260C00 /* HGMCAEPerson.m */; };
 		01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3A211B324A00260C00 /* HGMCAEEmployer.m */; };
 		01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3D211B3E4F00260C00 /* HGMConstValueView.m */; };
+		01561B44211B45C900260C00 /* HGMCopyingPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B42211B45C800260C00 /* HGMCopyingPerson.m */; };
+		01561B48211B45FB00260C00 /* HGMNSEnume.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B47211B45FB00260C00 /* HGMNSEnume.m */; };
 		0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */; };
 		0171E5DA211001580033688F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5D9211001580033688F /* timg.jpeg */; };
 		0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */; };
@@ -61,14 +62,16 @@
 		010D90F32117EB770026B185 /* NSObject+HGMGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HGMGuard.m"; sourceTree = "<group>"; };
 		010D90F52117F0470026B185 /* HGMDeallocBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDeallocBlockViewController.h; sourceTree = "<group>"; };
 		010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDeallocBlockViewController.m; sourceTree = "<group>"; };
-		01561B322119EF2300260C00 /* HGMCopyingPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCopyingPerson.h; sourceTree = "<group>"; };
-		01561B332119EF2300260C00 /* HGMCopyingPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCopyingPerson.m; sourceTree = "<group>"; };
 		01561B36211B321C00260C00 /* HGMCAEPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEPerson.h; sourceTree = "<group>"; };
 		01561B37211B321C00260C00 /* HGMCAEPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEPerson.m; sourceTree = "<group>"; };
 		01561B39211B324A00260C00 /* HGMCAEEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEEmployer.h; sourceTree = "<group>"; };
 		01561B3A211B324A00260C00 /* HGMCAEEmployer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEEmployer.m; sourceTree = "<group>"; };
 		01561B3C211B3E4F00260C00 /* HGMConstValueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMConstValueView.h; sourceTree = "<group>"; };
 		01561B3D211B3E4F00260C00 /* HGMConstValueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMConstValueView.m; sourceTree = "<group>"; };
+		01561B42211B45C800260C00 /* HGMCopyingPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMCopyingPerson.m; sourceTree = "<group>"; };
+		01561B43211B45C800260C00 /* HGMCopyingPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMCopyingPerson.h; sourceTree = "<group>"; };
+		01561B46211B45FB00260C00 /* HGMNSEnume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMNSEnume.h; sourceTree = "<group>"; };
+		01561B47211B45FB00260C00 /* HGMNSEnume.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMNSEnume.m; sourceTree = "<group>"; };
 		0171E5D5210FFFA40033688F /* HGMCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCoreImageViewController.h; sourceTree = "<group>"; };
 		0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCoreImageViewController.m; sourceTree = "<group>"; };
 		0171E5D9211001580033688F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
@@ -170,16 +173,6 @@
 			path = DeallocBlock;
 			sourceTree = "<group>";
 		};
-		01561B312119EEF600260C00 /* NSCopying */ = {
-			isa = PBXGroup;
-			children = (
-				01561B322119EF2300260C00 /* HGMCopyingPerson.h */,
-				01561B332119EF2300260C00 /* HGMCopyingPerson.m */,
-			);
-			name = NSCopying;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		01561B35211B31DF00260C00 /* ChickenAndEggSituation */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +182,24 @@
 				01561B3A211B324A00260C00 /* HGMCAEEmployer.m */,
 			);
 			path = ChickenAndEggSituation;
+			sourceTree = "<group>";
+		};
+		01561B41211B45C800260C00 /* NSCopying */ = {
+			isa = PBXGroup;
+			children = (
+				01561B42211B45C800260C00 /* HGMCopyingPerson.m */,
+				01561B43211B45C800260C00 /* HGMCopyingPerson.h */,
+			);
+			path = NSCopying;
+			sourceTree = "<group>";
+		};
+		01561B45211B45D900260C00 /* NSEnum */ = {
+			isa = PBXGroup;
+			children = (
+				01561B46211B45FB00260C00 /* HGMNSEnume.h */,
+				01561B47211B45FB00260C00 /* HGMNSEnume.m */,
+			);
+			path = NSEnum;
 			sourceTree = "<group>";
 		};
 		0171E5D4210FFF790033688F /* CoreImage */ = {
@@ -338,8 +349,9 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01561B45211B45D900260C00 /* NSEnum */,
+				01561B41211B45C800260C00 /* NSCopying */,
 				01561B35211B31DF00260C00 /* ChickenAndEggSituation */,
-				01561B312119EEF600260C00 /* NSCopying */,
 				010D90F12117EB520026B185 /* DeallocBlock */,
 				01FF2978211736B30045F73C /* DesignatedInitializer */,
 				01FF297021134C920045F73C /* KVOemplement */,
@@ -583,7 +595,9 @@
 				01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */,
 				01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
+				01561B44211B45C900260C00 /* HGMCopyingPerson.m in Sources */,
 				010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */,
+				01561B48211B45FB00260C00 /* HGMNSEnume.m in Sources */,
 				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				0171E5F62112B5310033688F /* HGMValue.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
@@ -606,7 +620,6 @@
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
-				01561B342119EF2300260C00 /* HGMCopyingPerson.m in Sources */,
 				010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
