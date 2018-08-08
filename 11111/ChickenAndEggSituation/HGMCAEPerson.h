@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 // HGMCAEPerson头文件引入HGMCAEEmployer，HGMCAEEmployer文件又引入HGMCAEPerson，导致“循环引用”
 // 用优雅的方式解决：“向前声明”--@class
 

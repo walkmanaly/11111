@@ -8,7 +8,19 @@
 
 #import "ConstValueViewController.h"
 
-
+/*
+ duplicate symbol _kDefaultHeight in:
+ /Users/Nick/Library/Developer/Xcode/DerivedData/11111-aqvpzgmfnahlssdrcifacmovdgka/Build/Intermediates.noindex/11111.build/Debug-iphonesimulator/11111.build/Objects-normal/x86_64/HGMConstValueView.o
+ /Users/Nick/Library/Developer/Xcode/DerivedData/11111-aqvpzgmfnahlssdrcifacmovdgka/Build/Intermediates.noindex/11111.build/Debug-iphonesimulator/11111.build/Objects-normal/x86_64/ConstValueViewController.o
+ ld: 1 duplicate symbol for architecture x86_64
+ 
+ 编译单元：指每个类的实现文件.m
+ 如果不用static修饰，编译器会为它创建一个外部符号。如果另个编译单元也声明了同样同名的变量，那么编译器就会抛出上面的错误信息。
+ 所以在 kDefaultHeight 前加static
+ static：修饰符，意味着仅在定义此变量的编译单元中可见。
+ 
+ */
+static const NSString *kDefaultHeight;
 
 NSString *const ConstValueViewControllerNotification = @"ConstValueViewControllerNotification";
 

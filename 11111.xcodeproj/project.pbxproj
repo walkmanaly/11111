@@ -12,6 +12,7 @@
 		01561B342119EF2300260C00 /* HGMCopyingPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B332119EF2300260C00 /* HGMCopyingPerson.m */; };
 		01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B37211B321C00260C00 /* HGMCAEPerson.m */; };
 		01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3A211B324A00260C00 /* HGMCAEEmployer.m */; };
+		01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3D211B3E4F00260C00 /* HGMConstValueView.m */; };
 		0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */; };
 		0171E5DA211001580033688F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5D9211001580033688F /* timg.jpeg */; };
 		0171E5DC21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */; };
@@ -66,6 +67,8 @@
 		01561B37211B321C00260C00 /* HGMCAEPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEPerson.m; sourceTree = "<group>"; };
 		01561B39211B324A00260C00 /* HGMCAEEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEEmployer.h; sourceTree = "<group>"; };
 		01561B3A211B324A00260C00 /* HGMCAEEmployer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEEmployer.m; sourceTree = "<group>"; };
+		01561B3C211B3E4F00260C00 /* HGMConstValueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMConstValueView.h; sourceTree = "<group>"; };
+		01561B3D211B3E4F00260C00 /* HGMConstValueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMConstValueView.m; sourceTree = "<group>"; };
 		0171E5D5210FFFA40033688F /* HGMCoreImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCoreImageViewController.h; sourceTree = "<group>"; };
 		0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCoreImageViewController.m; sourceTree = "<group>"; };
 		0171E5D9211001580033688F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 			children = (
 				0171E5EE2112B5020033688F /* ConstValueViewController.h */,
 				0171E5EF2112B5020033688F /* ConstValueViewController.m */,
+				01561B3C211B3E4F00260C00 /* HGMConstValueView.h */,
+				01561B3D211B3E4F00260C00 /* HGMConstValueView.m */,
 			);
 			path = TestConstValue;
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */,
 				01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */,
 				01FF297621134CE90045F73C /* HGMKVOemplementViewController.m in Sources */,
+				01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */,
 				0171E5F22112B5020033688F /* ConstValueViewController.m in Sources */,
 				0171E5F12112B5020033688F /* AssociatedObjectViewController.m in Sources */,
 				01FF297B211736F60045F73C /* HGMRetangle.m in Sources */,
