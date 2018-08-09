@@ -22,6 +22,7 @@
 #import "HGMSquier.h"
 #import "HGMDeallocBlockViewController.h"
 #import "HGMCopyingPerson.h"
+#import "HGMForwardingTarget.h"
 
 @interface ViewController ()
 
@@ -94,7 +95,56 @@
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
 //    [self testPrivateMethod];
-    [self testNSCopying];
+//    [self testNSCopying];
+    [self methodForwarding];
+}
+
+- (void)methodForwarding {
+    id mySelf = self;
+    // self没有testForwording方法，self在调用testForwording的时候，没找到此方法启动消息转发机制
+    // 1、动态方法解析：重写resolveInstanceMethod方法，动态添加实现
+    // 2、备援接受者：如果没有实现resolveInstanceMethod，重写forwardingTargetForSelector把实现转交给其他(实现该方法的)对象
+    // 3、完整的消息转发：如果在上述两步中我们仍然无法对消息进行处理，则会进入forwardInvocation这个方法中，不过在执行这个方法前会首先调用methodSignatureForSelector来请求一个签名，从而生成一个NSInvocation，对消息进行完全转发
+    [mySelf testForwording];
+}
+
+// 1
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    NSString *methodString = NSStringFromSelector(sel);
+    if ([methodString isEqualToString:@"testForwording"]) {
+        class_addMethod([self class], sel, (IMP)myMethod, "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+
+void myMethod(id self, SEL _cmd) {
+    NSLog(@"resolveInstanceMethod");
+}
+// 2
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    HGMForwardingTarget *target = [[HGMForwardingTarget alloc] init];
+    if ([target respondsToSelector:aSelector]) {
+        return target;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+// 3
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    if (!signature) {
+        if([HGMForwardingTarget instancesRespondToSelector:aSelector])
+        {
+            signature = [HGMForwardingTarget instanceMethodSignatureForSelector:aSelector];
+        }
+    }
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    if ([HGMForwardingTarget instancesRespondToSelector:anInvocation.selector]) {
+        [anInvocation invokeWithTarget:[[HGMForwardingTarget alloc] init]];
+    }
 }
 
 /*

@@ -11,7 +11,7 @@
 @implementation HGMNick (HGMWork)
 
 - (void)hgm_coding {
-    
+    NSLog(@"hgm_coding");
 }
 
 - (void)hgm_debugging {
