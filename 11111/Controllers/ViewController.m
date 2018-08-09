@@ -23,6 +23,7 @@
 #import "HGMDeallocBlockViewController.h"
 #import "HGMCopyingPerson.h"
 #import "HGMForwardingTarget.h"
+#import "HGMThirdViewController.h"
 
 @interface ViewController ()
 
@@ -94,9 +95,15 @@
 //    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
-//    [self testPrivateMethod];
+    [self jumpThirdViewcontroller];
 //    [self testNSCopying];
-    [self methodForwarding];
+//    [self methodForwarding];
+}
+
+- (void)jumpThirdViewcontroller {
+    HGMThirdViewController *vc = [[HGMThirdViewController alloc] init];
+    vc.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)methodForwarding {
@@ -105,6 +112,7 @@
     // 1、动态方法解析：重写resolveInstanceMethod方法，动态添加实现
     // 2、备援接受者：如果没有实现resolveInstanceMethod，重写forwardingTargetForSelector把实现转交给其他(实现该方法的)对象
     // 3、完整的消息转发：如果在上述两步中我们仍然无法对消息进行处理，则会进入forwardInvocation这个方法中，不过在执行这个方法前会首先调用methodSignatureForSelector来请求一个签名，从而生成一个NSInvocation，对消息进行完全转发
+    // 注意：步骤越往后，处理消息的代价就越大，最好第一步处理，还能将此方法缓存起来；能在第二步解决就不要
     [mySelf testForwording];
 }
 
@@ -191,29 +199,6 @@ void myMethod(id self, SEL _cmd) {
 //    [mutablePer addFriend:jack];
 //    NSLog(@"mutablePerCopy-%@", mutablePerCopy);
     
-}
-
-- (void)testPrivateMethod {
-    // _resetViewController 是UIviewcontroller的私有方法，不对外公开接口，实际上内部实现了此方法。
-    // 我们在定义私有方法时，避免使用_开头(苹果私有方法默认以_开头)，防止覆写了父类的私有方法，导致该调的父类方法没有执行，产生错误
-    BOOL isResponds = [self respondsToSelector:@selector(_resetViewController)];
-    NSLog(@"isResponds---%d", isResponds);
-    
-    Class clz = [self class];
-    unsigned int methodCount = 0;
-    Method *methods = class_copyMethodList(clz, &methodCount);
-    printf("Found %d methods on '%s'\n", methodCount, class_getName(clz));
-    for (unsigned int i = 0; i < methodCount; i++) {
-        Method method = methods[i];
-        printf("\t'%s' has method named '%s' of encoding '%s'\n",
-               class_getName(clz),
-               sel_getName(method_getName(method)),
-               method_getTypeEncoding(method));
-        /**
-         *  Or do whatever you need here...
-         */
-    }
-    free(methods);
 }
 
 - (void)testDeallocBlock {
