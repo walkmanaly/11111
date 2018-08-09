@@ -97,6 +97,30 @@
     [self testNSCopying];
 }
 
+/*
+ 指令：bt
+ 断点调试输入bt，查看调用堆栈。
+ * thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+ * frame #0: 0x00000001040f5879 11111`-[ViewController testNSCopying](self=0x00007ff6d5604600, _cmd="testNSCopying") at ViewController.m:110
+ frame #1: 0x00000001040f56f9 11111`-[ViewController touchesBegan:withEvent:](self=0x00007ff6d5604600, _cmd="touchesBegan:withEvent:", touches=1 element, event=0x00006040001042f0) at ViewController.m:97
+ frame #2: 0x00000001059b37c7 UIKit`forwardTouchMethod + 340
+ frame #3: 0x00000001059b3662 UIKit`-[UIResponder touchesBegan:withEvent:] + 49
+ frame #4: 0x00000001057fbe7a UIKit`-[UIWindow _sendTouchesForEvent:] + 2052
+ frame #5: 0x00000001057fd821 UIKit`-[UIWindow sendEvent:] + 4086
+ frame #6: 0x00000001057a1370 UIKit`-[UIApplication sendEvent:] + 352
+ frame #7: 0x00000001060e257f UIKit`__dispatchPreprocessedEventFromEventQueue + 2796
+ frame #8: 0x00000001060e5194 UIKit`__handleEventQueueInternal + 5949
+ frame #9: 0x000000010822ebb1 CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+ frame #10: 0x00000001082134af CoreFoundation`__CFRunLoopDoSources0 + 271
+ frame #11: 0x0000000108212a6f CoreFoundation`__CFRunLoopRun + 1263
+ frame #12: 0x000000010821230b CoreFoundation`CFRunLoopRunSpecific + 635
+ frame #13: 0x000000010be21a73 GraphicsServices`GSEventRunModal + 62
+ frame #14: 0x00000001057860b7 UIKit`UIApplicationMain + 159
+ frame #15: 0x00000001040f85df 11111`main(argc=1, argv=0x00007ffeebb0b0c8) at main.m:14
+ frame #16: 0x0000000108cb2955 libdyld.dylib`start + 1
+ frame #17: 0x0000000108cb2955 libdyld.dylib`start + 1
+ */
+
 - (void)testNSCopying {
     HGMCopyingPerson *per = [[HGMCopyingPerson alloc] initWithName:@"Nick" age:18];
     HGMCopyingPerson *rose = [[HGMCopyingPerson alloc] initWithName:@"rose" age:18];
