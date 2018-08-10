@@ -24,6 +24,7 @@
 #import "HGMCopyingPerson.h"
 #import "HGMForwardingTarget.h"
 #import "HGMThirdViewController.h"
+#import "HGMDES3Tool.h"
 
 @interface ViewController ()
 
@@ -82,7 +83,7 @@
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
-    [self demoRequest];
+//    [self demoRequest];
 //    [self testRuntime];
 //    [self testCPointer];
     
@@ -99,6 +100,14 @@
 //    [self jumpThirdViewcontroller];
 //    [self testNSCopying];
 //    [self methodForwarding];
+    [self testDES3];
+}
+
+- (void)testDES3 {
+    NSString *encodeString = [HGMDES3Tool enCrypt:@"hello world"];
+    NSLog(@"encodeString:%@", encodeString);
+    NSString *decodeString = [HGMDES3Tool deCrypt:encodeString];
+    NSLog(@"decodeString:%@", decodeString);
 }
 
 - (void)jumpThirdViewcontroller {
