@@ -18,6 +18,6 @@
 /**
  *  解密
  */
-+ (NSString*)deCrypt:(NSString*)encryptText;
++ (NSString *)deCrypt:(NSString *)encryptText;
 
 @end
