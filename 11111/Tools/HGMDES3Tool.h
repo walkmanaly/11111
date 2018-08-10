@@ -12,13 +12,12 @@
 
 /**
  *  加密
- *
- *  @param plainText 明文
- *  @param key       密钥
- *  @param iv        向量
- *
- *  @return 密文
  */
-+ (NSString *)AES256Encrypt:(NSString *)plainText key:(NSString *)key iv:(NSString *)iv;
++ (NSString *)encrypt:(NSString *)plainText;
+
+/**
+ *  解密
+ */
++ (NSString*)decrypt:(NSString*)encryptText;
 
 @end
