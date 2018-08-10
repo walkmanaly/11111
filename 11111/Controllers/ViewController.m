@@ -73,6 +73,7 @@
 //    [self demoRequest];
 //    [self pushToHGMRunloopViewController];
 //    [self testMethodSwizzling];
+    [self requestSkyWhether];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -81,7 +82,7 @@
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
-//    [self demoRequest];
+    [self demoRequest];
 //    [self testRuntime];
 //    [self testCPointer];
     
@@ -95,7 +96,7 @@
 //    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
-    [self jumpThirdViewcontroller];
+//    [self jumpThirdViewcontroller];
 //    [self testNSCopying];
 //    [self methodForwarding];
 }
@@ -421,6 +422,14 @@ void myMethod(id self, SEL _cmd) {
 //    } failured:^(NSString *failured) {
 //
 //    }];
+}
+
+- (void)requestSkyWhether {
+    [HttpTools getRequestWithSuccess:^(NSDictionary *successed) {
+        NSLog(@"%@", successed);
+    } failured:^(NSString *failured) {
+        NSLog(@"%@", failured);
+    }];
 }
 
 - (void)demoHandlerRequest {

@@ -35,17 +35,31 @@
 
 + (void)getRequestWithSuccess:(successedBlock)successed failured:(failuredBlock)failured {
     
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/greeting" ,baseurl]] cachePolicy:1 timeoutInterval:20];
-    NSURLSessionDataTask *session = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"%@", response);
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-        
-                NSLog(@"%@", dict);
-        successed(dict);
-        
+//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.darksky.net/forecast/a881e6763e06d73bbf02da397a1c36c9/37.8267,-122.4233"] cachePolicy:1 timeoutInterval:20];
+//    NSURLSessionDataTask *session = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"%@", response);
+//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
+//
+//                NSLog(@"%@", dict);
+//        successed(dict);
+//
+//    }];
+//
+//    [session resume];
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [manager GET:@"https://api.darksky.net/forecast/a881e6763e06d73bbf02da397a1c36c9/37.8267,-122.4233" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successed(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errror = error.domain;
+        failured(errror);
     }];
     
-    [session resume];
 }
 
 + (void)getWithParams:(NSString *)params completionhandler:(NetworkCompletionhandler)handler {

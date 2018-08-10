@@ -208,6 +208,15 @@
 			path = NSEnum;
 			sourceTree = "<group>";
 		};
+		01561B4F211C31BD00260C00 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0171E5D9211001580033688F /* timg.jpeg */,
+				0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		0171E5D4210FFF790033688F /* CoreImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,13 +224,6 @@
 				0171E5D6210FFFA40033688F /* HGMCoreImageViewController.m */,
 			);
 			path = CoreImage;
-			sourceTree = "<group>";
-		};
-		0171E5D82110012D0033688F /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		0171E5DD2111405D0033688F /* Bridge */ = {
@@ -359,6 +361,7 @@
 		01CD2A1D20E487E2004C8FDF /* 11111 */ = {
 			isa = PBXGroup;
 			children = (
+				01561B4F211C31BD00260C00 /* Resource */,
 				01561B45211B45D900260C00 /* NSEnum */,
 				01561B41211B45C800260C00 /* NSCopying */,
 				01561B35211B31DF00260C00 /* ChickenAndEggSituation */,
@@ -372,7 +375,6 @@
 				01FF295D211215830045F73C /* Catorgry */,
 				0171E5DD2111405D0033688F /* Bridge */,
 				01FF29492110ACDF0045F73C /* TestLoadMethod */,
-				0171E5D82110012D0033688F /* Resource */,
 				0171E5D4210FFF790033688F /* CoreImage */,
 				01F5D8BA2109782B00F2E46C /* Runloop */,
 				01C584682108DCA3000174E1 /* MessageForwarding */,
@@ -387,8 +389,6 @@
 				01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */,
 				01CD2A2C20E487E4004C8FDF /* Info.plist */,
 				01CD2A2D20E487E4004C8FDF /* main.m */,
-				0171E5D9211001580033688F /* timg.jpeg */,
-				0171E5DB21100FF00033688F /* GodfreyKneller-IsaacNewton-1689.jpg */,
 			);
 			path = 11111;
 			sourceTree = "<group>";
