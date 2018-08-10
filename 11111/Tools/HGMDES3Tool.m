@@ -21,7 +21,7 @@
  *
  *  @return 密文
  */
-+ (NSString *)encrypt:(NSString *)plainText {
++ (NSString *)enCrypt:(NSString *)plainText {
     
     NSData* data = [plainText dataUsingEncoding:NSUTF8StringEncoding];
     size_t plainTextBufferSize = [data length];
@@ -61,7 +61,7 @@
  *
  *  @return 明文
  */
-+ (NSString*)decrypt:(NSString *)encryptText {
++ (NSString*)deCrypt:(NSString *)encryptText {
     
     NSData* encryptData = [[NSData alloc] initWithBase64EncodedString:encryptText options:0];
     size_t plainTextBufferSize = [encryptData length];

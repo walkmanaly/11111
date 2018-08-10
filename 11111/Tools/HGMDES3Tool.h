@@ -13,11 +13,11 @@
 /**
  *  加密
  */
-+ (NSString *)encrypt:(NSString *)plainText;
++ (NSString *)enCrypt:(NSString *)plainText;
 
 /**
  *  解密
  */
-+ (NSString*)decrypt:(NSString*)encryptText;
++ (NSString*)deCrypt:(NSString*)encryptText;
 
 @end
