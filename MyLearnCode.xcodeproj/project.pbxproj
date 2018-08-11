@@ -37,7 +37,6 @@
 		01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830020F4537000E79F52 /* UIViewController+Hack.m */; };
 		01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830320F45A4300E79F52 /* TwoViewController.m */; };
 		01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */; };
-		01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846D210A0A42000174E1 /* NSString+HGMMethodSwizzling.m */; };
 		01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CCC1F3211D7DC400571AA3 /* HGMDES3Tool.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
 		01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2220E487E2004C8FDF /* ViewController.m */; };
@@ -120,8 +119,6 @@
 		01A3830320F45A4300E79F52 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		01C584692108DD04000174E1 /* HGMAutoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMAutoDictionary.h; sourceTree = "<group>"; };
 		01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMAutoDictionary.m; sourceTree = "<group>"; };
-		01C5846C210A0A42000174E1 /* NSString+HGMMethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HGMMethodSwizzling.h"; sourceTree = "<group>"; };
-		01C5846D210A0A42000174E1 /* NSString+HGMMethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HGMMethodSwizzling.m"; sourceTree = "<group>"; };
 		01CCC1F2211D7DC400571AA3 /* HGMDES3Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDES3Tool.h; sourceTree = "<group>"; };
 		01CCC1F3211D7DC400571AA3 /* HGMDES3Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDES3Tool.m; sourceTree = "<group>"; };
 		01CD2A1B20E487E2004C8FDF /* MyLearnCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLearnCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,13 +182,23 @@
 			path = DeallocBlock;
 			sourceTree = "<group>";
 		};
+		01203D47211F523D0094C1E2 /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				01CD2A2420E487E2004C8FDF /* Main.storyboard */,
+				01CD2A2720E487E4004C8FDF /* Assets.xcassets */,
+				01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */,
+				01CD2A2C20E487E4004C8FDF /* Info.plist */,
+				01CD2A2D20E487E4004C8FDF /* main.m */,
+			);
+			name = SupportingFile;
+			sourceTree = "<group>";
+		};
 		0124AE77211F446800287C31 /* MethodSwizzling */ = {
 			isa = PBXGroup;
 			children = (
 				0124AE78211F44C200287C31 /* NSString+HGMMethodSwape.h */,
 				0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */,
-				01C5846C210A0A42000174E1 /* NSString+HGMMethodSwizzling.h */,
-				01C5846D210A0A42000174E1 /* NSString+HGMMethodSwizzling.m */,
 			);
 			path = MethodSwizzling;
 			sourceTree = "<group>";
@@ -402,11 +409,7 @@
 				01A382F320EDE82400E79F52 /* Tools */,
 				01CD2A1E20E487E2004C8FDF /* AppDelegate.h */,
 				01CD2A1F20E487E2004C8FDF /* AppDelegate.m */,
-				01CD2A2420E487E2004C8FDF /* Main.storyboard */,
-				01CD2A2720E487E4004C8FDF /* Assets.xcassets */,
-				01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */,
-				01CD2A2C20E487E4004C8FDF /* Info.plist */,
-				01CD2A2D20E487E4004C8FDF /* main.m */,
+				01203D47211F523D0094C1E2 /* SupportingFile */,
 			);
 			path = MyLearnCode;
 			sourceTree = "<group>";
@@ -627,7 +630,6 @@
 				01561B44211B45C900260C00 /* HGMCopyingPerson.m in Sources */,
 				010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */,
 				01561B48211B45FB00260C00 /* HGMNSEnume.m in Sources */,
-				01C5846E210A0A42000174E1 /* NSString+HGMMethodSwizzling.m in Sources */,
 				0171E5F62112B5310033688F /* HGMValue.m in Sources */,
 				018BE89320F6E98000002064 /* Product.m in Sources */,
 				01FF297E2117397C0045F73C /* HGMSquier.m in Sources */,
