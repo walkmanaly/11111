@@ -22,8 +22,8 @@
 }
 
 - (void)hgm_uppercaseString {
-    NSLog(@"hgm_uppercaseString");
     [self hgm_uppercaseString];
+    NSLog(@"call my uppercaseString");
 }
 
 @end

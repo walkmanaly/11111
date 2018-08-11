@@ -16,6 +16,7 @@
 #import "AssociatedObjectViewController.h"
 #import "HGMRunloopViewController.h"
 #import "NSString+HGMMethodSwizzling.h"
+#import "NSString+HGMMethodSwape.h"
 #import "HGMPartimeViewController.h"
 #import "HGMKVOemplementViewController.h"
 #import "HGMRetangle.h"
@@ -73,7 +74,7 @@
 //    [self testRuntime1];
 //    [self demoRequest];
 //    [self pushToHGMRunloopViewController];
-//    [self testMethodSwizzling];
+    [self testMethodSwizzling];
     [self requestSkyWhether];
 }
 
@@ -316,10 +317,9 @@ void myMethod(id self, SEL _cmd) {
 }
 
 - (void)testMethodSwizzling {
-//    NSString *myStr = [[NSString stringWithFormat:@"hello"] uppercaseString];
-//    NSLog(@"%@", myStr);
-//    myStr = [myStr uppercaseString];
-//    NSLog(@"");
+    NSString *myStr = @"hello";
+    [myStr lowercaseString];
+    [myStr uppercaseString];
 }
 
 - (void)pushToHGMRunloopViewController {
