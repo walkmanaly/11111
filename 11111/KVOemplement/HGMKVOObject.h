@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGMKVOObject : NSObject
 
-@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, assign) double age;
+@property (nonatomic, copy) NSString *name;
 
 @end
 

@@ -94,13 +94,13 @@
     
 //    [self testNSOperationObject];
 //    [self testProtocol];
-//    [self testKVOemplementation];
+    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
 //    [self jumpThirdViewcontroller];
 //    [self testNSCopying];
 //    [self methodForwarding];
-    [self testDES3];
+//    [self testDES3];
 }
 
 - (void)testDES3 {
