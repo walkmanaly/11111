@@ -10,6 +10,9 @@
 		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */; };
+		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
+		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
+		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
 		01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B37211B321C00260C00 /* HGMCAEPerson.m */; };
 		01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3A211B324A00260C00 /* HGMCAEEmployer.m */; };
 		01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3D211B3E4F00260C00 /* HGMConstValueView.m */; };
@@ -36,6 +39,7 @@
 		01A382FD20F4508100E79F52 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A382FC20F4508100E79F52 /* OneViewController.m */; };
 		01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830020F4537000E79F52 /* UIViewController+Hack.m */; };
 		01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830320F45A4300E79F52 /* TwoViewController.m */; };
+		01BEAD1D2121D28600585903 /* HGMFMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */; };
 		01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */; };
 		01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CCC1F3211D7DC400571AA3 /* HGMDES3Tool.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
@@ -67,6 +71,12 @@
 		010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDeallocBlockViewController.m; sourceTree = "<group>"; };
 		0124AE78211F44C200287C31 /* NSString+HGMMethodSwape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HGMMethodSwape.h"; sourceTree = "<group>"; };
 		0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HGMMethodSwape.m"; sourceTree = "<group>"; };
+		014380E721208E5200ED0EB1 /* HGMFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFoo.h; sourceTree = "<group>"; };
+		014380E821208E5200ED0EB1 /* HGMFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFoo.m; sourceTree = "<group>"; };
+		014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBManager.h; sourceTree = "<group>"; };
+		014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFMDBManager.m; sourceTree = "<group>"; };
+		014380EE2121C9B500ED0EB1 /* HGMFMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBViewController.h; sourceTree = "<group>"; };
+		014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFMDBViewController.m; sourceTree = "<group>"; };
 		01561B36211B321C00260C00 /* HGMCAEPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEPerson.h; sourceTree = "<group>"; };
 		01561B37211B321C00260C00 /* HGMCAEPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEPerson.m; sourceTree = "<group>"; };
 		01561B39211B324A00260C00 /* HGMCAEEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEEmployer.h; sourceTree = "<group>"; };
@@ -117,6 +127,7 @@
 		01A3830020F4537000E79F52 /* UIViewController+Hack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hack.m"; sourceTree = "<group>"; };
 		01A3830220F45A4300E79F52 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		01A3830320F45A4300E79F52 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGMFMDBViewController.xib; sourceTree = "<group>"; };
 		01C584692108DD04000174E1 /* HGMAutoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMAutoDictionary.h; sourceTree = "<group>"; };
 		01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMAutoDictionary.m; sourceTree = "<group>"; };
 		01CCC1F2211D7DC400571AA3 /* HGMDES3Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDES3Tool.h; sourceTree = "<group>"; };
@@ -201,6 +212,27 @@
 				0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */,
 			);
 			path = MethodSwizzling;
+			sourceTree = "<group>";
+		};
+		014380E621208DEE00ED0EB1 /* MemerryManerger */ = {
+			isa = PBXGroup;
+			children = (
+				014380E721208E5200ED0EB1 /* HGMFoo.h */,
+				014380E821208E5200ED0EB1 /* HGMFoo.m */,
+			);
+			path = MemerryManerger;
+			sourceTree = "<group>";
+		};
+		014380EA2121C90D00ED0EB1 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */,
+				014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */,
+				014380EE2121C9B500ED0EB1 /* HGMFMDBViewController.h */,
+				014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */,
+				01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 		01561B35211B31DF00260C00 /* ChickenAndEggSituation */ = {
@@ -385,6 +417,8 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				014380EA2121C90D00ED0EB1 /* FMDB */,
+				014380E621208DEE00ED0EB1 /* MemerryManerger */,
 				0124AE77211F446800287C31 /* MethodSwizzling */,
 				01561B4F211C31BD00260C00 /* Resource */,
 				01561B45211B45D900260C00 /* NSEnum */,
@@ -551,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BEAD1D2121D28600585903 /* HGMFMDBViewController.xib in Resources */,
 				01CD2A2B20E487E4004C8FDF /* LaunchScreen.storyboard in Resources */,
 				01CD2A2820E487E4004C8FDF /* Assets.xcassets in Resources */,
 				0171E5DA211001580033688F /* timg.jpeg in Resources */,
@@ -622,9 +657,12 @@
 				01FF296C211216EB0045F73C /* HGMNick+HGMPlay.m in Sources */,
 				01CD2A2320E487E2004C8FDF /* ViewController.m in Sources */,
 				01FF297321134CC40045F73C /* HGMKVOObject.m in Sources */,
+				014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */,
 				01CD2A2E20E487E4004C8FDF /* main.m in Sources */,
+				014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */,
 				01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */,
 				0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */,
+				014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */,
 				01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
 				01561B44211B45C900260C00 /* HGMCopyingPerson.m in Sources */,

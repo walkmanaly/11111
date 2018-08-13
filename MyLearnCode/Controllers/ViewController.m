@@ -25,6 +25,7 @@
 #import "HGMForwardingTarget.h"
 #import "HGMThirdViewController.h"
 #import "HGMDES3Tool.h"
+#import "HGMFMDBViewController.h"
 
 @interface ViewController ()
 
@@ -94,13 +95,19 @@
     
 //    [self testNSOperationObject];
 //    [self testProtocol];
-    [self testKVOemplementation];
+//    [self testKVOemplementation];
 //    [self testDesignatedInitializer];
 //    [self testDeallocBlock];
 //    [self jumpThirdViewcontroller];
 //    [self testNSCopying];
 //    [self methodForwarding];
 //    [self testDES3];
+    [self testFMDB];
+}
+
+- (void)testFMDB {
+    HGMFMDBViewController *vc = [[HGMFMDBViewController alloc] initWithNibName:@"HGMFMDBViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testDES3 {
