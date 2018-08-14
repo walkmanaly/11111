@@ -102,7 +102,8 @@
 //    [self testNSCopying];
 //    [self methodForwarding];
 //    [self testDES3];
-    [self testFMDB];
+//    [self testFMDB];
+    [self demoNsoperation];
 }
 
 - (void)testFMDB {
@@ -463,23 +464,51 @@ void myMethod(id self, SEL _cmd) {
 }
 
 - (void)demoNsoperation {
+    // 111
+    // 注：会在调用start方法的线程执行，如果在主线程调用start并且是耗时操作，会有卡顿
+    NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
+//        [NSThread sleepForTimeInterval:2];
+        NSLog(@"execut task 1-%@-%@", [NSThread mainThread], [NSThread currentThread]);
+    }];
+    
+    // addExecutionBlock 则会创建子线程执行任务
+    [blockOperation addExecutionBlock:^{
+//        [NSThread sleepForTimeInterval:3];
+        NSLog(@"execute task 2-%@-%@", [NSThread mainThread], [NSThread currentThread]);
+    }];
+    
+    [blockOperation addExecutionBlock:^{
+//        [NSThread sleepForTimeInterval:4];
+        NSLog(@"execute task 3-%@-%@", [NSThread mainThread], [NSThread currentThread]);
+    }];
+    
+//    [blockOperation start];
+    
+    /*----------------------------*/
+    // 222
+    // 所有任务添加到队列异步执行
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:blockOperation];
     
-    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"op");
+    /*----------------------------*/
+    // 333
+    NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op1");
     }];
     
-    //    [op start];
-    
-    [queue addOperation:op];
-    
-    NSBlockOperation *clockOp = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"clockOp");
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op2");
     }];
-    [queue addOperation:clockOp];
     
-    [clockOp addDependency:op];
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op3");
+    }];
     
+    [op2 addDependency:op1];
+    [op3 addDependency:op2];
+    [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
 }
 
 - (void)demoKVC {
