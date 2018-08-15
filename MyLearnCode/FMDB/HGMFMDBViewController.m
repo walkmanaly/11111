@@ -20,6 +20,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *homeDir = NSHomeDirectory();
+    NSLog(@"homeDir-%@", homeDir);
+    
+    NSString *document = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"document-%@", document);
+    
+    NSString *library = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"libraly-%@", library);
+    
+    // 此方法获取路径是沙盒/Library/PreferencePanes，但并不存在这样的路径，想要访问Preferences文件夹，需要拼接路径。
+    NSString *preferance = [NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"preferance-%@", preferance);
+    
+    NSString *cache = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"cache-%@", cache);
+    
+    NSString *temp = NSTemporaryDirectory();
+    NSLog(@"temp-%@", temp);
+    
+    // 保存到Library的Preferences中
+    [[NSUserDefaults standardUserDefaults] setObject:@"hello" forKey:@"hello"];
+    
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     path = [path stringByAppendingPathComponent:@"/myDatabase"];
     NSLog(@"%@", path);

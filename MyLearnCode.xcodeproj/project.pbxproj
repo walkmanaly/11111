@@ -839,6 +839,7 @@
 			baseConfigurationReference = AAEB3AE29718A1E60F20BA2C /* Pods-MyLearnCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7J77R4NH6;
 				INFOPLIST_FILE = MyLearnCode/Info.plist;
@@ -848,6 +849,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -857,6 +859,7 @@
 			baseConfigurationReference = 34BA4B78CEA4E4CEAB810C31 /* Pods-MyLearnCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7J77R4NH6;
 				INFOPLIST_FILE = MyLearnCode/Info.plist;
@@ -866,6 +869,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

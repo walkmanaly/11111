@@ -102,8 +102,8 @@
 //    [self testNSCopying];
 //    [self methodForwarding];
 //    [self testDES3];
-//    [self testFMDB];
-    [self demoNsoperation];
+    [self testFMDB];
+//    [self demoNsoperation];
 }
 
 - (void)testFMDB {
