@@ -13,6 +13,8 @@
 		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
 		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
 		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
+		014381092125C85E00ED0EB1 /* libHGMTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014381072125C85E00ED0EB1 /* libHGMTool.a */; };
+		0143810C2125C88C00ED0EB1 /* HGMTestStaticLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0143810B2125C88C00ED0EB1 /* HGMTestStaticLibrary.m */; };
 		01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B37211B321C00260C00 /* HGMCAEPerson.m */; };
 		01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3A211B324A00260C00 /* HGMCAEEmployer.m */; };
 		01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01561B3D211B3E4F00260C00 /* HGMConstValueView.m */; };
@@ -77,6 +79,10 @@
 		014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFMDBManager.m; sourceTree = "<group>"; };
 		014380EE2121C9B500ED0EB1 /* HGMFMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBViewController.h; sourceTree = "<group>"; };
 		014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFMDBViewController.m; sourceTree = "<group>"; };
+		014381072125C85E00ED0EB1 /* libHGMTool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHGMTool.a; sourceTree = "<group>"; };
+		014381082125C85E00ED0EB1 /* HGMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMTool.h; sourceTree = "<group>"; };
+		0143810A2125C88C00ED0EB1 /* HGMTestStaticLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMTestStaticLibrary.h; sourceTree = "<group>"; };
+		0143810B2125C88C00ED0EB1 /* HGMTestStaticLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMTestStaticLibrary.m; sourceTree = "<group>"; };
 		01561B36211B321C00260C00 /* HGMCAEPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEPerson.h; sourceTree = "<group>"; };
 		01561B37211B321C00260C00 /* HGMCAEPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMCAEPerson.m; sourceTree = "<group>"; };
 		01561B39211B324A00260C00 /* HGMCAEEmployer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMCAEEmployer.h; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014381092125C85E00ED0EB1 /* libHGMTool.a in Frameworks */,
 				88C0485292B15D7938ADAD0C /* libPods-MyLearnCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +240,17 @@
 				01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */,
 			);
 			path = FMDB;
+			sourceTree = "<group>";
+		};
+		014380F12125C72E00ED0EB1 /* StaticLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				014381082125C85E00ED0EB1 /* HGMTool.h */,
+				014381072125C85E00ED0EB1 /* libHGMTool.a */,
+				0143810A2125C88C00ED0EB1 /* HGMTestStaticLibrary.h */,
+				0143810B2125C88C00ED0EB1 /* HGMTestStaticLibrary.m */,
+			);
+			path = StaticLibrary;
 			sourceTree = "<group>";
 		};
 		01561B35211B31DF00260C00 /* ChickenAndEggSituation */ = {
@@ -417,6 +435,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				014380F12125C72E00ED0EB1 /* StaticLibrary */,
 				014380EA2121C90D00ED0EB1 /* FMDB */,
 				014380E621208DEE00ED0EB1 /* MemerryManerger */,
 				0124AE77211F446800287C31 /* MethodSwizzling */,
@@ -662,6 +681,7 @@
 				014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */,
 				01FF29692112167C0045F73C /* HGMNick+HGMWork.m in Sources */,
 				0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */,
+				0143810C2125C88C00ED0EB1 /* HGMTestStaticLibrary.m in Sources */,
 				014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */,
 				01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
@@ -847,6 +867,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -866,6 +890,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
