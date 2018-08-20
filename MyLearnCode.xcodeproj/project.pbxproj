@@ -10,6 +10,7 @@
 		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */; };
+		013E25AC212B1AD000E39872 /* HGMClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25AB212B1AD000E39872 /* HGMClass.m */; };
 		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
 		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
 		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
@@ -73,6 +74,8 @@
 		010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDeallocBlockViewController.m; sourceTree = "<group>"; };
 		0124AE78211F44C200287C31 /* NSString+HGMMethodSwape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HGMMethodSwape.h"; sourceTree = "<group>"; };
 		0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HGMMethodSwape.m"; sourceTree = "<group>"; };
+		013E25AA212B1AD000E39872 /* HGMClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMClass.h; sourceTree = "<group>"; };
+		013E25AB212B1AD000E39872 /* HGMClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMClass.m; sourceTree = "<group>"; };
 		014380E721208E5200ED0EB1 /* HGMFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFoo.h; sourceTree = "<group>"; };
 		014380E821208E5200ED0EB1 /* HGMFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFoo.m; sourceTree = "<group>"; };
 		014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBManager.h; sourceTree = "<group>"; };
@@ -219,6 +222,15 @@
 				0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */,
 			);
 			path = MethodSwizzling;
+			sourceTree = "<group>";
+		};
+		013E25A9212B1AA300E39872 /* ZombieObject */ = {
+			isa = PBXGroup;
+			children = (
+				013E25AA212B1AD000E39872 /* HGMClass.h */,
+				013E25AB212B1AD000E39872 /* HGMClass.m */,
+			);
+			path = ZombieObject;
 			sourceTree = "<group>";
 		};
 		014380E621208DEE00ED0EB1 /* MemerryManerger */ = {
@@ -435,6 +447,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				013E25A9212B1AA300E39872 /* ZombieObject */,
 				014380F12125C72E00ED0EB1 /* StaticLibrary */,
 				014380EA2121C90D00ED0EB1 /* FMDB */,
 				014380E621208DEE00ED0EB1 /* MemerryManerger */,
@@ -693,6 +706,7 @@
 				01FF297E2117397C0045F73C /* HGMSquier.m in Sources */,
 				01561B38211B321C00260C00 /* HGMCAEPerson.m in Sources */,
 				01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */,
+				013E25AC212B1AD000E39872 /* HGMClass.m in Sources */,
 				01FF297621134CE90045F73C /* HGMKVOemplementViewController.m in Sources */,
 				01561B3E211B3E4F00260C00 /* HGMConstValueView.m in Sources */,
 				0171E5F22112B5020033688F /* ConstValueViewController.m in Sources */,
