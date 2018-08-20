@@ -50,7 +50,7 @@
 		01CD2A2620E487E2004C8FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2420E487E2004C8FDF /* Main.storyboard */; };
 		01CD2A2820E487E4004C8FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2720E487E4004C8FDF /* Assets.xcassets */; };
 		01CD2A2B20E487E4004C8FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */; };
-		01CD2A2E20E487E4004C8FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2D20E487E4004C8FDF /* main.m */; };
+		01CD2A2E20E487E4004C8FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2D20E487E4004C8FDF /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */; };
 		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
 		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
