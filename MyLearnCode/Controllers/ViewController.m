@@ -26,6 +26,7 @@
 #import "HGMThirdViewController.h"
 #import "HGMDES3Tool.h"
 #import "HGMFMDBViewController.h"
+#import "HGMKeychainViewController.h"
 
 @interface ViewController ()
 
@@ -102,8 +103,16 @@
 //    [self testNSCopying];
 //    [self methodForwarding];
 //    [self testDES3];
-    [self testFMDB];
+//    [self testFMDB];
 //    [self demoNsoperation];
+    [self testKeychain];
+    
+}
+
+- (void)testKeychain {
+    HGMKeychainViewController *vc = [[HGMKeychainViewController alloc] init];
+    vc.view.backgroundColor = [UIColor blueColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testFMDB {

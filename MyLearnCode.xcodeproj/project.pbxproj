@@ -11,6 +11,8 @@
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */; };
 		013E25AC212B1AD000E39872 /* HGMClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25AB212B1AD000E39872 /* HGMClass.m */; };
+		013E25B82133048B00E39872 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013E25B72133048B00E39872 /* Security.framework */; };
+		013E25BC213304C500E39872 /* HGMKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25BB213304C500E39872 /* HGMKeychainViewController.m */; };
 		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
 		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
 		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
@@ -76,6 +78,9 @@
 		0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HGMMethodSwape.m"; sourceTree = "<group>"; };
 		013E25AA212B1AD000E39872 /* HGMClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMClass.h; sourceTree = "<group>"; };
 		013E25AB212B1AD000E39872 /* HGMClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMClass.m; sourceTree = "<group>"; };
+		013E25B72133048B00E39872 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		013E25BA213304C500E39872 /* HGMKeychainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMKeychainViewController.h; sourceTree = "<group>"; };
+		013E25BB213304C500E39872 /* HGMKeychainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMKeychainViewController.m; sourceTree = "<group>"; };
 		014380E721208E5200ED0EB1 /* HGMFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFoo.h; sourceTree = "<group>"; };
 		014380E821208E5200ED0EB1 /* HGMFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFoo.m; sourceTree = "<group>"; };
 		014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBManager.h; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013E25B82133048B00E39872 /* Security.framework in Frameworks */,
 				014381092125C85E00ED0EB1 /* libHGMTool.a in Frameworks */,
 				88C0485292B15D7938ADAD0C /* libPods-MyLearnCode.a in Frameworks */,
 			);
@@ -231,6 +237,15 @@
 				013E25AB212B1AD000E39872 /* HGMClass.m */,
 			);
 			path = ZombieObject;
+			sourceTree = "<group>";
+		};
+		013E25B92133049300E39872 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				013E25BA213304C500E39872 /* HGMKeychainViewController.h */,
+				013E25BB213304C500E39872 /* HGMKeychainViewController.m */,
+			);
+			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
 		014380E621208DEE00ED0EB1 /* MemerryManerger */ = {
@@ -447,6 +462,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				013E25B92133049300E39872 /* SAMKeychain */,
 				013E25A9212B1AA300E39872 /* ZombieObject */,
 				014380F12125C72E00ED0EB1 /* StaticLibrary */,
 				014380EA2121C90D00ED0EB1 /* FMDB */,
@@ -551,6 +567,7 @@
 		E6D5CD1958E2603A218C39DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				013E25B72133048B00E39872 /* Security.framework */,
 				00264D19BBF8231C0B4D1147 /* libPods-MyLearnCode.a */,
 			);
 			name = Frameworks;
@@ -668,9 +685,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyLearnCode/Pods-MyLearnCode-resources.sh",
+				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -733,6 +753,7 @@
 				01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */,
 				0171E5F02112B5020033688F /* NSObject+AssociatedObjects.m in Sources */,
 				01561B4E211C103C00260C00 /* HGMThirdViewController.m in Sources */,
+				013E25BC213304C500E39872 /* HGMKeychainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
