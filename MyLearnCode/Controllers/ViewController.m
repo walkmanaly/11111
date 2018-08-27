@@ -27,6 +27,7 @@
 #import "HGMDES3Tool.h"
 #import "HGMFMDBViewController.h"
 #import "HGMKeychainViewController.h"
+#import "HGMClassClusterViewController.h"
 
 @interface ViewController ()
 
@@ -105,8 +106,15 @@
 //    [self testDES3];
 //    [self testFMDB];
 //    [self demoNsoperation];
-    [self testKeychain];
+//    [self testKeychain];
+    [self testClassCluster];
     
+}
+
+- (void)testClassCluster {
+    HGMClassClusterViewController *vc = [[HGMClassClusterViewController alloc] init];
+    vc.view.backgroundColor = [UIColor lightTextColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testKeychain {
