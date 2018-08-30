@@ -28,6 +28,7 @@
 #import "HGMFMDBViewController.h"
 #import "HGMKeychainViewController.h"
 #import "HGMClassClusterViewController.h"
+#import "HGMRACViewController.h"
 
 @interface ViewController ()
 
@@ -107,8 +108,14 @@
 //    [self testFMDB];
 //    [self demoNsoperation];
 //    [self testKeychain];
-    [self testClassCluster];
-    
+//    [self testClassCluster];
+    [self testRAC];
+}
+
+- (void)testRAC {
+    HGMRACViewController *vc = [[HGMRACViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testClassCluster {
