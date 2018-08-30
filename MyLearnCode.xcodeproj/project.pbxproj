@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0105581C2137BE2500425D92 /* HGMRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105581B2137BE2500425D92 /* HGMRACViewController.m */; };
+		0105581F2137C02000425D92 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105581E2137C02000425D92 /* LoginManager.m */; };
 		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */; };
@@ -71,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		00264D19BBF8231C0B4D1147 /* libPods-MyLearnCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLearnCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0105581A2137BE2500425D92 /* HGMRACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMRACViewController.h; sourceTree = "<group>"; };
+		0105581B2137BE2500425D92 /* HGMRACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMRACViewController.m; sourceTree = "<group>"; };
+		0105581D2137C02000425D92 /* LoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		0105581E2137C02000425D92 /* LoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		010D90F22117EB770026B185 /* NSObject+HGMGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HGMGuard.h"; sourceTree = "<group>"; };
 		010D90F32117EB770026B185 /* NSObject+HGMGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HGMGuard.m"; sourceTree = "<group>"; };
 		010D90F52117F0470026B185 /* HGMDeallocBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDeallocBlockViewController.h; sourceTree = "<group>"; };
@@ -201,6 +207,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010558192137BE0100425D92 /* ReactiveObjC */ = {
+			isa = PBXGroup;
+			children = (
+				0105581A2137BE2500425D92 /* HGMRACViewController.h */,
+				0105581B2137BE2500425D92 /* HGMRACViewController.m */,
+				0105581D2137C02000425D92 /* LoginManager.h */,
+				0105581E2137C02000425D92 /* LoginManager.m */,
+			);
+			path = ReactiveObjC;
+			sourceTree = "<group>";
+		};
 		010D90F12117EB520026B185 /* DeallocBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +491,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				010558192137BE0100425D92 /* ReactiveObjC */,
 				013E25BD21344DAD00E39872 /* ClassCluster */,
 				013E25B92133049300E39872 /* SAMKeychain */,
 				013E25A9212B1AA300E39872 /* ZombieObject */,
@@ -717,6 +735,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0105581F2137C02000425D92 /* LoginManager.m in Sources */,
 				018BE8A020F7495600002064 /* Book.m in Sources */,
 				01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */,
 				01FF296C211216EB0045F73C /* HGMNick+HGMPlay.m in Sources */,
@@ -731,6 +750,7 @@
 				014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */,
 				01561B3B211B324A00260C00 /* HGMCAEEmployer.m in Sources */,
 				01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */,
+				0105581C2137BE2500425D92 /* HGMRACViewController.m in Sources */,
 				01561B44211B45C900260C00 /* HGMCopyingPerson.m in Sources */,
 				010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */,
 				01561B48211B45FB00260C00 /* HGMNSEnume.m in Sources */,

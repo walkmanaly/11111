@@ -6,5 +6,6 @@ pod 'AFNetworking', '~> 3.0'
 pod 'MLeaksFinder'
 pod 'FMDB'
 pod 'SAMKeychain'
+pod 'ReactiveObjC'
 
 end
