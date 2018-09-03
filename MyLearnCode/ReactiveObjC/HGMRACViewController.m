@@ -156,10 +156,18 @@ static const NSString *UserDidLogOutNotification = @"UserDidLogOutNotification";
 
 // RAC实现kvo
 - (void)demo9 {
-    [[self rac_valuesForKeyPath:@"stringKey" observer:self] subscribeNext:^(id  _Nullable x) {
+    // 方法一：
+//    [[self rac_valuesForKeyPath:@"stringKey" observer:self] subscribeNext:^(id  _Nullable x) {
+//        // 属性调用setter方法触发
+//        NSLog(@"stringKey--%@", x);
+//    }];
+    
+    // 方法二：
+    [RACObserve(self, stringKey) subscribeNext:^(id  _Nullable x) {
         // 属性调用setter方法触发
         NSLog(@"stringKey--%@", x);
     }];
+    
 }
 
 // RAC定时器
