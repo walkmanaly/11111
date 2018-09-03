@@ -68,6 +68,7 @@ static const NSString *UserDidLogOutNotification = @"UserDidLogOutNotification";
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self demo2];
     //    [self demo3];
     self.stringKey = @"rose";
     // 与kvo一致，调用setter方法才会触发
@@ -145,9 +146,9 @@ static const NSString *UserDidLogOutNotification = @"UserDidLogOutNotification";
     }];
 }
 
-// RAC代理
+// RAC代理       racView中的racBtnClick方法被执行时，此处收到信号，处理信号
 - (void)demo8 {
-    [[_racView rac_signalForSelector:@selector(racViewBtnClickr)] subscribeNext:^(RACTuple * _Nullable x) {
+    [[_racView rac_signalForSelector:@selector(racBtnClick)] subscribeNext:^(RACTuple * _Nullable x) {
         // 当racView调用racViewBtnClickr时，获得订阅
         NSLog(@"Delegate%@", x);
     }];

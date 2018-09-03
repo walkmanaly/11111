@@ -15,17 +15,15 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(racBtnClick) forControlEvents:UIControlEventTouchUpInside];
     button.frame = CGRectMake(100, 0, 100, 40);
     [self addSubview:button];
 }
 
-- (void)btnClick {
-    [self racViewBtnClickr];
+- (void)racBtnClick {
+    NSLog(@"racBtnClick");
 }
 
-- (void)racViewBtnClickr {
-    NSLog(@"racViewBtnClickr");
-}
+
 
 @end
