@@ -10,6 +10,7 @@
 		0105581C2137BE2500425D92 /* HGMRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105581B2137BE2500425D92 /* HGMRACViewController.m */; };
 		0105581F2137C02000425D92 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105581E2137C02000425D92 /* LoginManager.m */; };
 		010558362137E37400425D92 /* HGMRACView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010558352137E37400425D92 /* HGMRACView.m */; };
+		01055845213E1E1000425D92 /* HGMMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01055844213E1E1000425D92 /* HGMMyTableViewController.m */; };
 		010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F32117EB770026B185 /* NSObject+HGMGuard.m */; };
 		010D90F72117F0470026B185 /* HGMDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D90F62117F0470026B185 /* HGMDeallocBlockViewController.m */; };
 		0124AE7A211F44C200287C31 /* NSString+HGMMethodSwape.m in Sources */ = {isa = PBXBuildFile; fileRef = 0124AE79211F44C200287C31 /* NSString+HGMMethodSwape.m */; };
@@ -80,6 +81,8 @@
 		0105581E2137C02000425D92 /* LoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		010558342137E37400425D92 /* HGMRACView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMRACView.h; sourceTree = "<group>"; };
 		010558352137E37400425D92 /* HGMRACView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMRACView.m; sourceTree = "<group>"; };
+		01055843213E1E1000425D92 /* HGMMyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMMyTableViewController.h; sourceTree = "<group>"; };
+		01055844213E1E1000425D92 /* HGMMyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMMyTableViewController.m; sourceTree = "<group>"; };
 		010D90F22117EB770026B185 /* NSObject+HGMGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HGMGuard.h"; sourceTree = "<group>"; };
 		010D90F32117EB770026B185 /* NSObject+HGMGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HGMGuard.m"; sourceTree = "<group>"; };
 		010D90F52117F0470026B185 /* HGMDeallocBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDeallocBlockViewController.h; sourceTree = "<group>"; };
@@ -221,6 +224,15 @@
 				010558352137E37400425D92 /* HGMRACView.m */,
 			);
 			path = ReactiveObjC;
+			sourceTree = "<group>";
+		};
+		01055842213E1DFB00425D92 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				01055843213E1E1000425D92 /* HGMMyTableViewController.h */,
+				01055844213E1E1000425D92 /* HGMMyTableViewController.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		010D90F12117EB520026B185 /* DeallocBlock */ = {
@@ -496,6 +508,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				01055842213E1DFB00425D92 /* TableView */,
 				010558192137BE0100425D92 /* ReactiveObjC */,
 				013E25BD21344DAD00E39872 /* ClassCluster */,
 				013E25B92133049300E39872 /* SAMKeychain */,
@@ -784,6 +797,7 @@
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
 				010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
+				01055845213E1E1000425D92 /* HGMMyTableViewController.m in Sources */,
 				010558362137E37400425D92 /* HGMRACView.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
@@ -946,6 +960,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -970,6 +985,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.MyLearnCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

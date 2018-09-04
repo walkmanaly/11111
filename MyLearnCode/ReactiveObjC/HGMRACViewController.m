@@ -19,6 +19,9 @@ static const NSString *UserDidLogOutNotification = @"UserDidLogOutNotification";
 @property (nonatomic, strong) UIButton *registerButton;
 @property (nonatomic, strong) UITextField *usernameTextField;
 @property (nonatomic, strong) UITextField *passwordTextField;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, copy) NSString *passwordComfire;
+@property (nonatomic, assign) BOOL creationEnable;
 @property (nonatomic, strong) HGMRACView *racView;
 
 @property (nonatomic, assign) BOOL loggedIn;
@@ -135,6 +138,13 @@ static const NSString *UserDidLogOutNotification = @"UserDidLogOutNotification";
 - (void)demo6 {
     RAC(_logInButton, enabled) = [RACSignal combineLatest:@[_usernameTextField.rac_textSignal, _passwordTextField.rac_textSignal] reduce:^id _Nonnull{
         return @(self->_usernameTextField.text.length>0 && self->_passwordTextField.text.length>0);
+    }];
+}
+
+// 登判断两次输入的密码是否一致
+- (void)demo61 {
+    RAC(self, creationEnable) = [RACSignal combineLatest:@[RACObserve(self, password), RACObserve(self, passwordComfire)] reduce:^(NSString *password, NSString * passwordComfire){
+        return @([password isEqualToString:passwordComfire]);
     }];
 }
 
