@@ -30,6 +30,7 @@
 #import "HGMClassClusterViewController.h"
 #import "HGMRACViewController.h"
 #import "HGMMyTableViewController.h"
+#import "HGMJSDemoViewController.h"
 
 @interface ViewController ()
 
@@ -78,9 +79,9 @@
 //    [self testRuntime1];
 //    [self demoRequest];
 //    [self pushToHGMRunloopViewController];
-    [self testMethodSwizzling];
-    [self requestSkyWhether];
-    [self pushTbv];
+//    [self testMethodSwizzling];
+//    [self requestSkyWhether];
+//    [self pushTbv];
 }
 
 - (void)pushTbv {
@@ -116,7 +117,13 @@
 //    [self demoNsoperation];
 //    [self testKeychain];
 //    [self testClassCluster];
-    [self testRAC];
+//    [self testRAC];
+    [self testJSDemo];
+}
+
+- (void)testJSDemo {
+    HGMJSDemoViewController *vc = [[HGMJSDemoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testRAC {
