@@ -19,6 +19,7 @@
 		013E25BC213304C500E39872 /* HGMKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25BB213304C500E39872 /* HGMKeychainViewController.m */; };
 		013E25C021344DD200E39872 /* HGMClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25BF21344DD200E39872 /* HGMClassClusterViewController.m */; };
 		014222072151E8DA0091027F /* HGMJSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014222062151E8DA0091027F /* HGMJSDemoViewController.m */; };
+		014222242153487C0091027F /* HGMDateComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014222232153487C0091027F /* HGMDateComponentViewController.m */; };
 		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
 		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
 		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
@@ -99,6 +100,9 @@
 		013E25BF21344DD200E39872 /* HGMClassClusterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMClassClusterViewController.m; sourceTree = "<group>"; };
 		014222052151E8DA0091027F /* HGMJSDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMJSDemoViewController.h; sourceTree = "<group>"; };
 		014222062151E8DA0091027F /* HGMJSDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMJSDemoViewController.m; sourceTree = "<group>"; };
+		0142221E21533FDA0091027F /* MyLearnCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyLearnCode.entitlements; sourceTree = "<group>"; };
+		014222222153487C0091027F /* HGMDateComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDateComponentViewController.h; sourceTree = "<group>"; };
+		014222232153487C0091027F /* HGMDateComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDateComponentViewController.m; sourceTree = "<group>"; };
 		014380E721208E5200ED0EB1 /* HGMFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFoo.h; sourceTree = "<group>"; };
 		014380E821208E5200ED0EB1 /* HGMFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFoo.m; sourceTree = "<group>"; };
 		014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBManager.h; sourceTree = "<group>"; };
@@ -304,6 +308,15 @@
 				014222062151E8DA0091027F /* HGMJSDemoViewController.m */,
 			);
 			path = JSDemo;
+			sourceTree = "<group>";
+		};
+		01422221215348550091027F /* NSDateComponent */ = {
+			isa = PBXGroup;
+			children = (
+				014222222153487C0091027F /* HGMDateComponentViewController.h */,
+				014222232153487C0091027F /* HGMDateComponentViewController.m */,
+			);
+			path = NSDateComponent;
 			sourceTree = "<group>";
 		};
 		014380E621208DEE00ED0EB1 /* MemerryManerger */ = {
@@ -520,6 +533,8 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				01422221215348550091027F /* NSDateComponent */,
+				0142221E21533FDA0091027F /* MyLearnCode.entitlements */,
 				014222042151E8BA0091027F /* JSDemo */,
 				01055842213E1DFB00425D92 /* TableView */,
 				010558192137BE0100425D92 /* ReactiveObjC */,
@@ -670,6 +685,17 @@
 				TargetAttributes = {
 					01CD2A1A20E487E2004C8FDF = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -814,6 +840,7 @@
 				01055845213E1E1000425D92 /* HGMMyTableViewController.m in Sources */,
 				010558362137E37400425D92 /* HGMRACView.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
+				014222242153487C0091027F /* HGMDateComponentViewController.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
 				0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */,

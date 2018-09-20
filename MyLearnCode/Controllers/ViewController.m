@@ -31,6 +31,7 @@
 #import "HGMRACViewController.h"
 #import "HGMMyTableViewController.h"
 #import "HGMJSDemoViewController.h"
+#import "HGMDateComponentViewController.h"
 
 @interface ViewController ()
 
@@ -118,7 +119,14 @@
 //    [self testKeychain];
 //    [self testClassCluster];
 //    [self testRAC];
-    [self testJSDemo];
+//    [self testJSDemo];
+    [self testDate];
+}
+
+- (void)testDate {
+    HGMDateComponentViewController *vc = [[HGMDateComponentViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testJSDemo {
