@@ -8,8 +8,9 @@
 
 #import "AssociatedObjectViewController.h"
 #import "NSObject+AssociatedObjects.h"
+#import "UIView+HGMAssociateView.h"
 
-@interface AssociatedObjectViewController () <AssociatedObjectsProtocol>
+@interface AssociatedObjectViewController () <AssociatedObjectsProtocol, AssociateViewProtocol>
 
 @end
 
@@ -19,13 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSObject *obj = [[NSObject alloc] init];
-    obj.delegate = self;
-    obj.associatedObject = @"hello";
-    
-    NSLog(@"%@", obj.associatedObject);
-    [obj associatiedMethod];
-    
+//    NSObject *obj = [[NSObject alloc] init];
+//    obj.delegate = self;
+//    obj.associatedObject = @"hello";
+//
+//    NSLog(@"%@", obj.associatedObject);
+//    [obj associatiedMethod];
+//
+    UIView *view = [[UIView alloc] init];
+    view.desc = @"description";
+    view.delegate = self;
+    NSLog(@"%@", view.desc);
+    [self.view addSubview:view];
+    [view removeFromSuperview];
 }
 
 #pragma mark - AssociatedObjectsProtocol
@@ -33,6 +40,9 @@
     NSLog(@"associatedObjectsProtocolMethod");
 }
 
-
+#pragma mark - AssociateViewProtocol
+- (void)test {
+    NSLog(@"AssociateViewProtocol");
+}
 
 @end

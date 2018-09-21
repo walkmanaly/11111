@@ -92,7 +92,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self demoTestPush];
-//    [self pushAssociatedObjectViewController];
+    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
@@ -120,7 +120,7 @@
 //    [self testClassCluster];
 //    [self testRAC];
 //    [self testJSDemo];
-    [self testDate];
+//    [self testDate];
 }
 
 - (void)testDate {

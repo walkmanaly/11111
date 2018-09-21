@@ -32,9 +32,9 @@ static const void *kAssociatedDelegate;
 
 - (void)associatiedMethod {
 //    NSLog(@"associatiedMethod");
-//    if ([self.delegate respondsToSelector:@selector(associatedObjectsProtocolMethod)]) {
+    if ([self.delegate respondsToSelector:@selector(associatedObjectsProtocolMethod)]) {
         [self.delegate associatedObjectsProtocolMethod];
-//    }
+    }
 }
 
 @end

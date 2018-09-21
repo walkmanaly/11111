@@ -20,6 +20,7 @@
 		013E25C021344DD200E39872 /* HGMClassClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013E25BF21344DD200E39872 /* HGMClassClusterViewController.m */; };
 		014222072151E8DA0091027F /* HGMJSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014222062151E8DA0091027F /* HGMJSDemoViewController.m */; };
 		014222242153487C0091027F /* HGMDateComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014222232153487C0091027F /* HGMDateComponentViewController.m */; };
+		0142222A2154BD280091027F /* UIView+HGMAssociateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 014222292154BD280091027F /* UIView+HGMAssociateView.m */; };
 		014380E921208E5200ED0EB1 /* HGMFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380E821208E5200ED0EB1 /* HGMFoo.m */; };
 		014380ED2121C96600ED0EB1 /* HGMFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EC2121C96500ED0EB1 /* HGMFMDBManager.m */; };
 		014380F02121C9B500ED0EB1 /* HGMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014380EF2121C9B500ED0EB1 /* HGMFMDBViewController.m */; };
@@ -103,6 +104,8 @@
 		0142221E21533FDA0091027F /* MyLearnCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyLearnCode.entitlements; sourceTree = "<group>"; };
 		014222222153487C0091027F /* HGMDateComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDateComponentViewController.h; sourceTree = "<group>"; };
 		014222232153487C0091027F /* HGMDateComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMDateComponentViewController.m; sourceTree = "<group>"; };
+		014222282154BD280091027F /* UIView+HGMAssociateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HGMAssociateView.h"; sourceTree = "<group>"; };
+		014222292154BD280091027F /* UIView+HGMAssociateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HGMAssociateView.m"; sourceTree = "<group>"; };
 		014380E721208E5200ED0EB1 /* HGMFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFoo.h; sourceTree = "<group>"; };
 		014380E821208E5200ED0EB1 /* HGMFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMFoo.m; sourceTree = "<group>"; };
 		014380EB2121C96500ED0EB1 /* HGMFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMFMDBManager.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				0171E5EB2112B5020033688F /* AssociatedObjectViewController.m */,
 				0171E5EC2112B5020033688F /* NSObject+AssociatedObjects.h */,
 				0171E5EA2112B5020033688F /* NSObject+AssociatedObjects.m */,
+				014222282154BD280091027F /* UIView+HGMAssociateView.h */,
+				014222292154BD280091027F /* UIView+HGMAssociateView.m */,
 			);
 			path = AssociatedObjects;
 			sourceTree = "<group>";
@@ -845,6 +850,7 @@
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
 				0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */,
 				01561B4B211BDEE800260C00 /* HGMForwardingTarget.m in Sources */,
+				0142222A2154BD280091027F /* UIView+HGMAssociateView.m in Sources */,
 				01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */,
 				0171E5F02112B5020033688F /* NSObject+AssociatedObjects.m in Sources */,
 				01561B4E211C103C00260C00 /* HGMThirdViewController.m in Sources */,
