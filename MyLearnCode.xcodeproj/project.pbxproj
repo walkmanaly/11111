@@ -54,6 +54,8 @@
 		01A3830120F4537100E79F52 /* UIViewController+Hack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830020F4537000E79F52 /* UIViewController+Hack.m */; };
 		01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A3830320F45A4300E79F52 /* TwoViewController.m */; };
 		01BEAD1D2121D28600585903 /* HGMFMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */; };
+		01C2BD5D215A56EA002C024B /* HGMNSOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD5C215A56EA002C024B /* HGMNSOperationViewController.m */; };
+		01C2BD60215A6095002C024B /* HGMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD5F215A6095002C024B /* HGMOperation.m */; };
 		01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */; };
 		01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CCC1F3211D7DC400571AA3 /* HGMDES3Tool.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
@@ -61,7 +63,7 @@
 		01CD2A2620E487E2004C8FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2420E487E2004C8FDF /* Main.storyboard */; };
 		01CD2A2820E487E4004C8FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2720E487E4004C8FDF /* Assets.xcassets */; };
 		01CD2A2B20E487E4004C8FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CD2A2920E487E4004C8FDF /* LaunchScreen.storyboard */; };
-		01CD2A2E20E487E4004C8FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2D20E487E4004C8FDF /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01CD2A2E20E487E4004C8FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A2D20E487E4004C8FDF /* main.m */; };
 		01F5D8BD2109784800F2E46C /* HGMRunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F5D8BC2109784800F2E46C /* HGMRunloopViewController.m */; };
 		01FF294C2110ACF80045F73C /* HGMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294B2110ACF80045F73C /* HGMPerson.m */; };
 		01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF294E2110AD340045F73C /* HGMPerson+load.m */; };
@@ -170,6 +172,10 @@
 		01A3830220F45A4300E79F52 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		01A3830320F45A4300E79F52 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGMFMDBViewController.xib; sourceTree = "<group>"; };
+		01C2BD5B215A56EA002C024B /* HGMNSOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMNSOperationViewController.h; sourceTree = "<group>"; };
+		01C2BD5C215A56EA002C024B /* HGMNSOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMNSOperationViewController.m; sourceTree = "<group>"; };
+		01C2BD5E215A6095002C024B /* HGMOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMOperation.h; sourceTree = "<group>"; };
+		01C2BD5F215A6095002C024B /* HGMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMOperation.m; sourceTree = "<group>"; };
 		01C584692108DD04000174E1 /* HGMAutoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMAutoDictionary.h; sourceTree = "<group>"; };
 		01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMAutoDictionary.m; sourceTree = "<group>"; };
 		01CCC1F2211D7DC400571AA3 /* HGMDES3Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDES3Tool.h; sourceTree = "<group>"; };
@@ -518,6 +524,17 @@
 			path = Hack;
 			sourceTree = "<group>";
 		};
+		01C2BD5A215A56D2002C024B /* NSoperation */ = {
+			isa = PBXGroup;
+			children = (
+				01C2BD5B215A56EA002C024B /* HGMNSOperationViewController.h */,
+				01C2BD5C215A56EA002C024B /* HGMNSOperationViewController.m */,
+				01C2BD5E215A6095002C024B /* HGMOperation.h */,
+				01C2BD5F215A6095002C024B /* HGMOperation.m */,
+			);
+			path = NSoperation;
+			sourceTree = "<group>";
+		};
 		01C584682108DCA3000174E1 /* MessageForwarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +567,7 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				01C2BD5A215A56D2002C024B /* NSoperation */,
 				0142222B2159C47C0091027F /* Block */,
 				01422221215348550091027F /* NSDateComponent */,
 				0142221E21533FDA0091027F /* MyLearnCode.entitlements */,
@@ -850,12 +868,14 @@
 				013E25C021344DD200E39872 /* HGMClassClusterViewController.m in Sources */,
 				017BDFFF20FE3FD40064403D /* TestRecycleReferanceObjectB.m in Sources */,
 				01A382FA20EDF1C500E79F52 /* Greeting.m in Sources */,
+				01C2BD60215A6095002C024B /* HGMOperation.m in Sources */,
 				01FF29662112162E0045F73C /* HGMNick.m in Sources */,
 				01A382F620EDE84900E79F52 /* HttpTools.m in Sources */,
 				01FF294F2110AD340045F73C /* HGMPerson+load.m in Sources */,
 				0171E5E0211140CD0033688F /* HGMBridgeViewController.m in Sources */,
 				010D90F42117EB770026B185 /* NSObject+HGMGuard.m in Sources */,
 				017BDFFC20FE3FC80064403D /* TestRecycleReferanceObjectA.m in Sources */,
+				01C2BD5D215A56EA002C024B /* HGMNSOperationViewController.m in Sources */,
 				01055845213E1E1000425D92 /* HGMMyTableViewController.m in Sources */,
 				010558362137E37400425D92 /* HGMRACView.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,

@@ -11,21 +11,21 @@
 #import "AppDelegate.h"
 #import "HGMClass.h"
 
-void PrintClassInfo(id obj) {
-    Class cls = object_getClass(obj);
-    Class superCls = class_getSuperclass(cls);
-    NSLog(@"---%s : %s---", class_getName(cls), class_getName(superCls));
-}
+//void PrintClassInfo(id obj) {
+//    Class cls = object_getClass(obj);
+//    Class superCls = class_getSuperclass(cls);
+//    NSLog(@"---%s : %s---", class_getName(cls), class_getName(superCls));
+//}
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         
-        HGMClass *obj = [[HGMClass alloc] init];
-        NSLog(@"before");
-        PrintClassInfo(obj);
-        [obj release];
-        NSLog(@"after");
-        PrintClassInfo(obj);
+//        HGMClass *obj = [[HGMClass alloc] init];
+//        NSLog(@"before");
+//        PrintClassInfo(obj);
+//        [obj release];
+//        NSLog(@"after");
+//        PrintClassInfo(obj);
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

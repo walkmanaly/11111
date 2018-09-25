@@ -33,6 +33,7 @@
 #import "HGMJSDemoViewController.h"
 #import "HGMDateComponentViewController.h"
 #import "HGMBlockViewController.h"
+#import "HGMNSOperationViewController.h"
 
 @interface ViewController ()
 
@@ -122,7 +123,14 @@
 //    [self testRAC];
 //    [self testJSDemo];
 //    [self testDate];
-    [self testBlock];
+//    [self testBlock];
+    [self operation];
+}
+
+- (void)operation {
+    HGMNSOperationViewController *vc = [[HGMNSOperationViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testBlock {
