@@ -11,12 +11,16 @@
 
 @interface HGMNSOperationViewController ()
 
+@property (nonatomic, assign) NSInteger tiketsCount;
+@property (nonatomic, strong) NSLock *lock;
+
 @end
 
 @implementation HGMNSOperationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tiketsCount = 20;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -32,7 +36,11 @@
     // 7
 //    [self useDepandency];
     // 8
-    [self usePriority];
+//    [self usePriority];
+    // 9
+//    [self threadCommunication];
+    // 10
+    [self buyTicket];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -215,6 +223,87 @@
     [queue addOperation:op1];
     [queue addOperation:op2];
     [queue addOperation:op3];
+}
+
+// 9、线程通讯
+
+- (void)threadCommunication {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [queue addOperationWithBlock:^{
+        for (int i = 0; i < 2; i++) {
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"1---%@", [NSThread currentThread]);
+        }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSLog(@"reflash UI");
+            NSLog(@"2---%@", [NSThread currentThread]);
+        }];
+    }];
+}
+
+// 10、线程安全
+
+- (void)buyTicket {
+    NSOperationQueue *queue1 = [[NSOperationQueue alloc] init];
+    queue1.maxConcurrentOperationCount = 1;
+    
+    NSOperationQueue *queue2 = [[NSOperationQueue alloc] init];
+    queue2.maxConcurrentOperationCount = 1;
+    
+    __weak typeof(self) weakSelf = self;
+    
+    NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        [weakSelf safeBuy];
+    }];
+    
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        [weakSelf safeBuy];
+    }];
+    
+    [queue1 addOperation:op1];
+    [queue2 addOperation:op2];
+    
+}
+
+- (void)unsafeBuy {
+    while (1) {
+        if (self.tiketsCount > 0) {
+            self.tiketsCount--;
+            [NSThread sleepForTimeInterval:0.2];
+            NSLog(@"tikets left %zd", self.tiketsCount);
+        } else {
+            break;
+        }
+    }
+}
+
+- (void)safeBuy {
+    while (1) {
+        
+        [self.lock lock];
+        
+        if (self.tiketsCount > 0) {
+            self.tiketsCount--;
+            [NSThread sleepForTimeInterval:0.2];
+            NSLog(@"tikets left %zd", self.tiketsCount);
+        }
+        
+        [self.lock unlock];
+        
+        if (self.tiketsCount == 0) {
+            NSLog(@"sale out");
+            break;
+        }
+    }
+}
+
+- (NSLock *)lock {
+    if (!_lock) {
+        _lock = [[NSLock alloc] init];
+    }
+    return _lock;
 }
 
 @end
