@@ -30,7 +30,9 @@
     // 5
 //    [self addOperationToQueue];
     // 7
-    [self useDepandency];
+//    [self useDepandency];
+    // 8
+    [self usePriority];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -186,6 +188,33 @@
     
     // 添加依赖，op2执行完op1才执行
     [op1 addDependency:op2];
+}
+
+// 8、priority优先级
+
+- (void)usePriority {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    NSInvocationOperation *op1 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task1) object:nil];
+    
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        for (int i = 0; i < 2; i++) {
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"2---%@", [NSThread currentThread]);
+        }
+    }];
+    
+    HGMOperation *op3 = [[HGMOperation alloc] init];
+    
+    [op3 addDependency:op2];
+    // op3依赖于op2，所以这里的Priority只对已经准备就绪状态的op1和op2有效
+    // Priority不会影响op2与op3的执行x顺序
+    op1.queuePriority = NSOperationQueuePriorityLow;
+    op2.queuePriority = NSOperationQueuePriorityHigh;
+    
+    [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
 }
 
 @end
