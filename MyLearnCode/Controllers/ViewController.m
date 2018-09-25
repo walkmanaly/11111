@@ -32,6 +32,7 @@
 #import "HGMMyTableViewController.h"
 #import "HGMJSDemoViewController.h"
 #import "HGMDateComponentViewController.h"
+#import "HGMBlockViewController.h"
 
 @interface ViewController ()
 
@@ -92,7 +93,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self demoTestPush];
-    [self pushAssociatedObjectViewController];
+//    [self pushAssociatedObjectViewController];
 //    [self demoKVC];
 //    [self demoDecode];
 //    [self testRunLoop];
@@ -121,6 +122,13 @@
 //    [self testRAC];
 //    [self testJSDemo];
 //    [self testDate];
+    [self testBlock];
+}
+
+- (void)testBlock {
+    HGMBlockViewController *vc = [[HGMBlockViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)testDate {
