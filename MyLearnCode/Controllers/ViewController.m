@@ -34,6 +34,8 @@
 #import "HGMDateComponentViewController.h"
 #import "HGMBlockViewController.h"
 #import "HGMNSOperationViewController.h"
+#import "HGMNSThreadViewController.h"
+#import "HGMGCDViewController.h"
 
 @interface ViewController ()
 
@@ -85,6 +87,7 @@
 //    [self testMethodSwizzling];
 //    [self requestSkyWhether];
 //    [self pushTbv];
+    [self gmGCD];
 }
 
 - (void)pushTbv {
@@ -124,12 +127,27 @@
 //    [self testJSDemo];
 //    [self testDate];
 //    [self testBlock];
-    [self operation];
+//    [self operation];
+//    [self nsthread];
+}
+
+- (void)gmGCD {
+    
+    HGMGCDViewController *vc = [[HGMGCDViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+
+- (void)nsthread {
+    
+    HGMNSThreadViewController *vc = [[HGMNSThreadViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)operation {
     HGMNSOperationViewController *vc = [[HGMNSOperationViewController alloc] init];
-    vc.view.backgroundColor = [UIColor grayColor];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -622,6 +640,9 @@ void myMethod(id self, SEL _cmd) {
     
     
     BOOL isSuccessed = [NSKeyedArchiver archiveRootObject:book toFile:path];
+    if (isSuccessed) {
+        NSLog(@"save successed");
+    }
     
     Book *unarch = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     NSLog(@"%@", unarch);

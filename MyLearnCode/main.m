@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
 #import "AppDelegate.h"
-#import "HGMClass.h"
+//#import "HGMClass.h"
 
 //void PrintClassInfo(id obj) {
 //    Class cls = object_getClass(obj);

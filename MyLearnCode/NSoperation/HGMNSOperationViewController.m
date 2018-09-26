@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     self.tiketsCount = 20;
 }
 
@@ -220,6 +221,15 @@
     op1.queuePriority = NSOperationQueuePriorityLow;
     op2.queuePriority = NSOperationQueuePriorityHigh;
     
+    __weak typeof(op2) weakOp2 = op2;
+    [op2 setCompletionBlock:^{
+        // op2执行完毕之后的回调
+        if (!weakOp2.isCancelled) {
+            // 不是取消才是正常执行完毕(取消也会执行此回调)
+            NSLog(@"op2 执行完毕后打印此信息");
+        }
+    }];
+    
     [queue addOperation:op1];
     [queue addOperation:op2];
     [queue addOperation:op3];
@@ -286,8 +296,8 @@
         
         if (self.tiketsCount > 0) {
             self.tiketsCount--;
+            NSLog(@"tikets left %zd thread %@", self.tiketsCount, [NSThread currentThread]);
             [NSThread sleepForTimeInterval:0.2];
-            NSLog(@"tikets left %zd", self.tiketsCount);
         }
         
         [self.lock unlock];
@@ -297,6 +307,7 @@
             break;
         }
     }
+    self.lock = nil;
 }
 
 - (NSLock *)lock {

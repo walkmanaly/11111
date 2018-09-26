@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,8 @@
 		01BEAD1D2121D28600585903 /* HGMFMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BEAD1C2121D28600585903 /* HGMFMDBViewController.xib */; };
 		01C2BD5D215A56EA002C024B /* HGMNSOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD5C215A56EA002C024B /* HGMNSOperationViewController.m */; };
 		01C2BD60215A6095002C024B /* HGMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD5F215A6095002C024B /* HGMOperation.m */; };
+		01C2BD64215B364A002C024B /* HGMNSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD63215B364A002C024B /* HGMNSThreadViewController.m */; };
+		01C2BD68215B5756002C024B /* HGMGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BD67215B5756002C024B /* HGMGCDViewController.m */; };
 		01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */; };
 		01CCC1F4211D7DC400571AA3 /* HGMDES3Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CCC1F3211D7DC400571AA3 /* HGMDES3Tool.m */; };
 		01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD2A1F20E487E2004C8FDF /* AppDelegate.m */; };
@@ -176,6 +178,10 @@
 		01C2BD5C215A56EA002C024B /* HGMNSOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMNSOperationViewController.m; sourceTree = "<group>"; };
 		01C2BD5E215A6095002C024B /* HGMOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMOperation.h; sourceTree = "<group>"; };
 		01C2BD5F215A6095002C024B /* HGMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMOperation.m; sourceTree = "<group>"; };
+		01C2BD62215B364A002C024B /* HGMNSThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMNSThreadViewController.h; sourceTree = "<group>"; };
+		01C2BD63215B364A002C024B /* HGMNSThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMNSThreadViewController.m; sourceTree = "<group>"; };
+		01C2BD66215B5756002C024B /* HGMGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMGCDViewController.h; sourceTree = "<group>"; };
+		01C2BD67215B5756002C024B /* HGMGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMGCDViewController.m; sourceTree = "<group>"; };
 		01C584692108DD04000174E1 /* HGMAutoDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMAutoDictionary.h; sourceTree = "<group>"; };
 		01C5846A2108DD04000174E1 /* HGMAutoDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMAutoDictionary.m; sourceTree = "<group>"; };
 		01CCC1F2211D7DC400571AA3 /* HGMDES3Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMDES3Tool.h; sourceTree = "<group>"; };
@@ -535,6 +541,24 @@
 			path = NSoperation;
 			sourceTree = "<group>";
 		};
+		01C2BD61215B362A002C024B /* NSThread */ = {
+			isa = PBXGroup;
+			children = (
+				01C2BD62215B364A002C024B /* HGMNSThreadViewController.h */,
+				01C2BD63215B364A002C024B /* HGMNSThreadViewController.m */,
+			);
+			path = NSThread;
+			sourceTree = "<group>";
+		};
+		01C2BD65215B5746002C024B /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				01C2BD66215B5756002C024B /* HGMGCDViewController.h */,
+				01C2BD67215B5756002C024B /* HGMGCDViewController.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		01C584682108DCA3000174E1 /* MessageForwarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +591,8 @@
 		01CD2A1D20E487E2004C8FDF /* MyLearnCode */ = {
 			isa = PBXGroup;
 			children = (
+				01C2BD65215B5746002C024B /* GCD */,
+				01C2BD61215B362A002C024B /* NSThread */,
 				01C2BD5A215A56D2002C024B /* NSoperation */,
 				0142222B2159C47C0091027F /* Block */,
 				01422221215348550091027F /* NSDateComponent */,
@@ -721,6 +747,7 @@
 				TargetAttributes = {
 					01CD2A1A20E487E2004C8FDF = {
 						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -736,7 +763,7 @@
 				};
 			};
 			buildConfigurationList = 01CD2A1620E487E2004C8FDF /* Build configuration list for PBXProject "MyLearnCode" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -862,6 +889,7 @@
 				01FF297B211736F60045F73C /* HGMRetangle.m in Sources */,
 				01CD2A2020E487E2004C8FDF /* AppDelegate.m in Sources */,
 				01FF29522110AE100045F73C /* HGMStudent.m in Sources */,
+				01C2BD68215B5756002C024B /* HGMGCDViewController.m in Sources */,
 				0171E5E72112B4B80033688F /* HGMPartimeViewController.m in Sources */,
 				0171E5E62112B4B80033688F /* HGMEmployer.m in Sources */,
 				01A382FD20F4508100E79F52 /* OneViewController.m in Sources */,
@@ -880,6 +908,7 @@
 				010558362137E37400425D92 /* HGMRACView.m in Sources */,
 				01FF296F211217630045F73C /* HGMNick+HGMLearn.m in Sources */,
 				014222242153487C0091027F /* HGMDateComponentViewController.m in Sources */,
+				01C2BD64215B364A002C024B /* HGMNSThreadViewController.m in Sources */,
 				01A3830420F45A4300E79F52 /* TwoViewController.m in Sources */,
 				01C5846B2108DD04000174E1 /* HGMAutoDictionary.m in Sources */,
 				0171E5D7210FFFA40033688F /* HGMCoreImageViewController.m in Sources */,
@@ -1033,10 +1062,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7J77R4NH6;
 				INFOPLIST_FILE = MyLearnCode/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
@@ -1058,10 +1084,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7J77R4NH6;
 				INFOPLIST_FILE = MyLearnCode/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyLearnCode/StaticLibrary",
