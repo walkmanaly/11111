@@ -32,7 +32,13 @@
     // 5.1          -----创建新的线程，在新的线程中获取主线程添加任务执行-----
 //    [NSThread detachNewThreadSelector:@selector(mainSync) toTarget:self withObject:nil];
     // 6
-    [self mainAsync];
+//    [self mainAsync];
+    // 7
+//    [self threadCommunication];
+    // 8
+//    [self barrier];
+    // 9
+    [self apply];
 }
 
 // 1、并发队列，同步执行
@@ -205,6 +211,68 @@
     });
     NSLog(@"mainAsync end");
     // 结果：按顺序在主线程同步执行任务
+}
+
+// 7、线程间通讯
+- (void)threadCommunication {
+    dispatch_queue_t global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t main = dispatch_get_main_queue();
+    
+    dispatch_async(global, ^{
+        // 往全局并发队列添加异步执行任务（耗时操作）
+        NSLog(@"sleep 3s---%@", [NSThread currentThread]);
+        [NSThread sleepForTimeInterval:3];
+        
+        // 回到主队列，更新UI
+        dispatch_async(main, ^{
+            NSLog(@"update UI---%@", [NSThread currentThread]);
+        });
+    });
+}
+
+// 8、barrier
+- (void)barrier {
+    dispatch_queue_t queue = dispatch_queue_create("com.nick.gm8", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"task2 %@", [NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"task1 %@", [NSThread currentThread]);
+    });
+    // 阑珊后添加的任务，在阑珊任务执行完之后，才能执行
+    dispatch_barrier_async(queue, ^{
+        
+        [NSThread sleepForTimeInterval:2];
+            NSLog(@"barrier %@", [NSThread currentThread]);
+       
+    });
+    
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"task4 %@", [NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"task3 %@", [NSThread currentThread]);
+    });
+}
+
+// 9、apply
+- (void)apply {
+    dispatch_queue_t queue = dispatch_queue_create("com.nick.gm9", DISPATCH_QUEUE_CONCURRENT);
+    
+//    NSArray *arr = @[@"a", @"b", @"c", @"d", @"e"];
+    
+    NSLog(@"apply begin");
+    dispatch_apply(30, queue, ^(size_t index) {
+        NSLog(@"%zu---%@", index, [NSThread currentThread]);
+    });
+    NSLog(@"apply end");
 }
 
 @end
