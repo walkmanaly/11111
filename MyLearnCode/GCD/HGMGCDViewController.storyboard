@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="u8C-vf-mxz">
+            <objects>
+                <viewController storyboardIdentifier="HGMGCDViewController" id="MWp-Oo-3ji" customClass="HGMGCDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cee-9Z-HV2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-tp-8Yd">
+                                <rect key="frame" x="118.5" y="50" width="138" height="30"/>
+                                <state key="normal" title="串行队列，同步执行"/>
+                                <connections>
+                                    <action selector="syncSerial:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="yct-tx-DJE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJC-Qu-9la">
+                                <rect key="frame" x="118.5" y="120" width="138" height="30"/>
+                                <state key="normal" title="并发队列，同步执行"/>
+                                <connections>
+                                    <action selector="syncConcurrent:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="KSU-f1-rzd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-rK-yMh">
+                                <rect key="frame" x="118.5" y="85" width="138" height="30"/>
+                                <state key="normal" title="串行队列，异步执行"/>
+                                <connections>
+                                    <action selector="asyncSerial:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="Wlj-Ub-igX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpT-DZ-cIg">
+                                <rect key="frame" x="118.5" y="155" width="138" height="30"/>
+                                <state key="normal" title="并发队列，异步执行"/>
+                                <connections>
+                                    <action selector="asyncConcurrent:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="AkU-hS-jsv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21b-AW-CSO">
+                                <rect key="frame" x="126" y="270" width="123" height="30"/>
+                                <state key="normal" title="主队列，异步执行"/>
+                                <connections>
+                                    <action selector="mainAsync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="xa4-xb-e7T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwU-gc-5MU">
+                                <rect key="frame" x="149" y="315" width="77" height="30"/>
+                                <state key="normal" title="线程间通讯"/>
+                                <connections>
+                                    <action selector="mainAsync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="s0j-2t-vCk"/>
+                                    <action selector="threadCommunication:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="q1w-gD-Cax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEd-Vy-S9t">
+                                <rect key="frame" x="149.5" y="350" width="76" height="30"/>
+                                <state key="normal" title="栅栏barrier"/>
+                                <connections>
+                                    <action selector="barrier:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="zCT-mM-D1Z"/>
+                                    <action selector="mainAsync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="Ufq-wd-3TF"/>
+                                    <action selector="threadCommunication:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="cC7-av-rpW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-kR-EDX">
+                                <rect key="frame" x="90" y="235" width="195" height="30"/>
+                                <state key="normal" title="主队列，同步执行(解决死锁)"/>
+                                <connections>
+                                    <action selector="mainAsync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="tgR-xO-W4X"/>
+                                    <action selector="resolveDeadLock:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="ivg-cL-n6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-UW-V5b">
+                                <rect key="frame" x="105.5" y="200" width="164" height="30"/>
+                                <state key="normal" title="主队列，同步执行(死锁)"/>
+                                <connections>
+                                    <action selector="mainSync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="iqR-fP-aAH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwa-te-UHk">
+                                <rect key="frame" x="168.5" y="385" width="38" height="30"/>
+                                <state key="normal" title="apply"/>
+                                <connections>
+                                    <action selector="apply:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="yoA-W6-nV6"/>
+                                    <action selector="barrier:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="0oE-Rc-vJf"/>
+                                    <action selector="mainAsync:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="lFc-Ue-4L0"/>
+                                    <action selector="threadCommunication:" destination="MWp-Oo-3ji" eventType="touchUpInside" id="wlW-5N-pnF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="21b-AW-CSO" firstAttribute="top" secondItem="zkx-kR-EDX" secondAttribute="bottom" constant="5" id="0Wq-0H-MLp"/>
+                            <constraint firstItem="9ma-rK-yMh" firstAttribute="centerX" secondItem="HnR-tp-8Yd" secondAttribute="centerX" id="1R0-db-azK"/>
+                            <constraint firstItem="zkx-kR-EDX" firstAttribute="centerX" secondItem="Cee-9Z-HV2" secondAttribute="centerX" id="227-cM-Fjy"/>
+                            <constraint firstItem="zkx-kR-EDX" firstAttribute="top" secondItem="uTU-UW-V5b" secondAttribute="bottom" constant="5" id="6V5-uZ-Wou"/>
+                            <constraint firstItem="qpT-DZ-cIg" firstAttribute="top" secondItem="JJC-Qu-9la" secondAttribute="bottom" constant="5" id="6oT-YM-plb"/>
+                            <constraint firstItem="uTU-UW-V5b" firstAttribute="centerX" secondItem="qpT-DZ-cIg" secondAttribute="centerX" id="Cx1-8l-qcE"/>
+                            <constraint firstItem="qwa-te-UHk" firstAttribute="top" secondItem="lEd-Vy-S9t" secondAttribute="bottom" constant="5" id="E9T-Eb-K8W"/>
+                            <constraint firstItem="XwU-gc-5MU" firstAttribute="top" secondItem="21b-AW-CSO" secondAttribute="bottom" constant="15" id="HAu-WQ-Sla"/>
+                            <constraint firstItem="HnR-tp-8Yd" firstAttribute="centerX" secondItem="Cee-9Z-HV2" secondAttribute="centerX" id="Lh7-CF-z7U"/>
+                            <constraint firstItem="21b-AW-CSO" firstAttribute="centerX" secondItem="uTU-UW-V5b" secondAttribute="centerX" id="QHh-Hh-0jI"/>
+                            <constraint firstItem="XwU-gc-5MU" firstAttribute="centerX" secondItem="21b-AW-CSO" secondAttribute="centerX" id="QuO-CG-28E"/>
+                            <constraint firstItem="lEd-Vy-S9t" firstAttribute="centerX" secondItem="XwU-gc-5MU" secondAttribute="centerX" id="TXg-wA-zoB"/>
+                            <constraint firstItem="qwa-te-UHk" firstAttribute="centerX" secondItem="lEd-Vy-S9t" secondAttribute="centerX" id="UUs-3a-jA1"/>
+                            <constraint firstItem="uTU-UW-V5b" firstAttribute="top" secondItem="qpT-DZ-cIg" secondAttribute="bottom" constant="15" id="WAN-ta-FBU"/>
+                            <constraint firstItem="JJC-Qu-9la" firstAttribute="centerX" secondItem="9ma-rK-yMh" secondAttribute="centerX" id="WDK-3R-FuM"/>
+                            <constraint firstItem="JJC-Qu-9la" firstAttribute="top" secondItem="9ma-rK-yMh" secondAttribute="bottom" constant="5" id="ff5-q0-NvU"/>
+                            <constraint firstItem="HnR-tp-8Yd" firstAttribute="top" secondItem="qUf-r3-qcD" secondAttribute="top" constant="30" id="hqs-E4-IhN"/>
+                            <constraint firstItem="lEd-Vy-S9t" firstAttribute="top" secondItem="XwU-gc-5MU" secondAttribute="bottom" constant="5" id="lQM-sH-JCY"/>
+                            <constraint firstItem="9ma-rK-yMh" firstAttribute="top" secondItem="HnR-tp-8Yd" secondAttribute="bottom" constant="5" id="pU9-Ka-CGA"/>
+                            <constraint firstItem="qpT-DZ-cIg" firstAttribute="centerX" secondItem="JJC-Qu-9la" secondAttribute="centerX" id="t1R-98-0cA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qUf-r3-qcD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOo-AL-DRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.199999999999999" y="-188.45577211394306"/>
+        </scene>
+    </scenes>
+</document>

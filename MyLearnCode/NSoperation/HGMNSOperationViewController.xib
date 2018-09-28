@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HGMNSOperationViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="szm-PB-2MJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGq-J6-hzw">
+                    <rect key="frame" x="108" y="50" width="159" height="30"/>
+                    <state key="normal" title="NSInvocationOperation"/>
+                    <connections>
+                        <action selector="useNSInvocationOperation:" destination="-1" eventType="touchUpInside" id="voQ-LJ-tIE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-lQ-Dd0">
+                    <rect key="frame" x="124" y="85" width="127" height="30"/>
+                    <state key="normal" title="NSBlockOperation"/>
+                    <connections>
+                        <action selector="useNSBlockOperation:" destination="-1" eventType="touchUpInside" id="Xwp-2q-Zq9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXv-ik-Zve">
+                    <rect key="frame" x="55" y="120" width="265" height="30"/>
+                    <state key="normal" title="NSBlockOperationAddExcuteoperation"/>
+                    <connections>
+                        <action selector="useAddExcuteoperation:" destination="-1" eventType="touchUpInside" id="8ZF-5W-2Pb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-ta-ndP">
+                    <rect key="frame" x="97.5" y="155" width="180" height="30"/>
+                    <state key="normal" title="NSOperation的自定义子类"/>
+                    <connections>
+                        <action selector="useNSOperationSubClass:" destination="-1" eventType="touchUpInside" id="qPr-MP-0pK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLK-uE-FaY">
+                    <rect key="frame" x="123" y="200" width="129" height="30"/>
+                    <state key="normal" title="OperationToQueue"/>
+                    <connections>
+                        <action selector="addOperationToQueue:" destination="-1" eventType="touchUpInside" id="9tU-z4-AZu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSb-P7-0Hk">
+                    <rect key="frame" x="144" y="235" width="87" height="30"/>
+                    <state key="normal" title="Depandency"/>
+                    <connections>
+                        <action selector="useDepandency:" destination="-1" eventType="touchUpInside" id="nCf-bo-u92"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-E7-HjP">
+                    <rect key="frame" x="163" y="270" width="49" height="30"/>
+                    <state key="normal" title="Priority"/>
+                    <connections>
+                        <action selector="usePriority:" destination="-1" eventType="touchUpInside" id="Mgn-Kt-b1K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNr-no-zG5">
+                    <rect key="frame" x="111.5" y="305" width="152" height="30"/>
+                    <state key="normal" title="threadCommunication"/>
+                    <connections>
+                        <action selector="threadCommunication:" destination="-1" eventType="touchUpInside" id="glP-36-HzE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz7-hs-Qsp">
+                    <rect key="frame" x="114" y="340" width="147" height="30"/>
+                    <state key="normal" title="ThreadSafeBuyTicket"/>
+                    <connections>
+                        <action selector="buyTicket:" destination="-1" eventType="touchUpInside" id="SAu-lg-9aM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y8g-lQ-Dd0" firstAttribute="top" secondItem="DGq-J6-hzw" secondAttribute="bottom" constant="5" id="1dM-8I-W4v"/>
+                <constraint firstItem="U7R-E7-HjP" firstAttribute="centerX" secondItem="RSb-P7-0Hk" secondAttribute="centerX" id="35O-jI-pQr"/>
+                <constraint firstItem="SbM-ta-ndP" firstAttribute="centerX" secondItem="KXv-ik-Zve" secondAttribute="centerX" id="3RH-Ah-F38"/>
+                <constraint firstItem="DGq-J6-hzw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Zo-aZ-F5v"/>
+                <constraint firstItem="U7R-E7-HjP" firstAttribute="top" secondItem="RSb-P7-0Hk" secondAttribute="bottom" constant="5" id="HJu-6y-l9R"/>
+                <constraint firstItem="KXv-ik-Zve" firstAttribute="top" secondItem="Y8g-lQ-Dd0" secondAttribute="bottom" constant="5" id="JIp-ld-TZ7"/>
+                <constraint firstItem="pLK-uE-FaY" firstAttribute="top" secondItem="SbM-ta-ndP" secondAttribute="bottom" constant="15" id="UB9-ZD-o8L"/>
+                <constraint firstItem="Y8g-lQ-Dd0" firstAttribute="centerX" secondItem="DGq-J6-hzw" secondAttribute="centerX" id="ZVm-cu-vqv"/>
+                <constraint firstItem="iNr-no-zG5" firstAttribute="top" secondItem="U7R-E7-HjP" secondAttribute="bottom" constant="5" id="fn0-ee-Dy2"/>
+                <constraint firstItem="RSb-P7-0Hk" firstAttribute="centerX" secondItem="pLK-uE-FaY" secondAttribute="centerX" id="hB7-v1-Qc1"/>
+                <constraint firstItem="SbM-ta-ndP" firstAttribute="top" secondItem="KXv-ik-Zve" secondAttribute="bottom" constant="5" id="j0u-Vy-62n"/>
+                <constraint firstItem="iNr-no-zG5" firstAttribute="centerX" secondItem="U7R-E7-HjP" secondAttribute="centerX" id="kXa-pC-ukW"/>
+                <constraint firstItem="DGq-J6-hzw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="lOc-Vd-vfc"/>
+                <constraint firstItem="RSb-P7-0Hk" firstAttribute="top" secondItem="pLK-uE-FaY" secondAttribute="bottom" constant="5" id="lWC-ze-dgV"/>
+                <constraint firstItem="Rz7-hs-Qsp" firstAttribute="centerX" secondItem="iNr-no-zG5" secondAttribute="centerX" id="m99-60-GD1"/>
+                <constraint firstItem="pLK-uE-FaY" firstAttribute="centerX" secondItem="SbM-ta-ndP" secondAttribute="centerX" id="mQ0-4F-w13"/>
+                <constraint firstItem="Rz7-hs-Qsp" firstAttribute="top" secondItem="iNr-no-zG5" secondAttribute="bottom" constant="5" id="si2-nb-qhw"/>
+                <constraint firstItem="KXv-ik-Zve" firstAttribute="centerX" secondItem="Y8g-lQ-Dd0" secondAttribute="centerX" id="wYI-Bm-wdr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

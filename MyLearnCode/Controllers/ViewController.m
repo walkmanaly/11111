@@ -87,7 +87,6 @@
 //    [self testMethodSwizzling];
 //    [self requestSkyWhether];
 //    [self pushTbv];
-    [self gmGCD];
 }
 
 - (void)pushTbv {
@@ -129,12 +128,15 @@
 //    [self testBlock];
 //    [self operation];
 //    [self nsthread];
+    [self gmGCD];
 }
 
 - (void)gmGCD {
     
-    HGMGCDViewController *vc = [[HGMGCDViewController alloc] init];
-    vc.view.backgroundColor = [UIColor grayColor];
+//    HGMGCDViewController *vc = [[HGMGCDViewController alloc] init];
+//    vc.view.backgroundColor = [UIColor grayColor];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"HGMGCDViewController" bundle:nil];
+    HGMGCDViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HGMGCDViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 
 }
@@ -147,8 +149,9 @@
 }
 
 - (void)operation {
-    HGMNSOperationViewController *vc = [[HGMNSOperationViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    HGMNSOperationViewController *vc = [[HGMNSOperationViewController alloc] init];
+    HGMNSOperationViewController *vvc = [[HGMNSOperationViewController alloc] initWithNibName:@"HGMNSOperationViewController" bundle:nil];
+    [self.navigationController pushViewController:vvc animated:YES];
 }
 
 - (void)testBlock {

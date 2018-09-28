@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+//    self.view.backgroundColor = [UIColor grayColor];
     self.tiketsCount = 20;
 }
 
@@ -41,20 +41,20 @@
     // 9
 //    [self threadCommunication];
     // 10
-    [self buyTicket];
+//    [self buyTicket];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    // 1
-    // 在主线调用
-    [self useNSInvocationOperation];
-    
-    // 在新线程中调用
-    [NSThread detachNewThreadSelector:@selector(useNSInvocationOperation) toTarget:self withObject:nil];
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    // 1
+//    // 在主线调用
+//    [self useNSInvocationOperation:nil];
+//    
+//    // 在新线程中调用
+//    [NSThread detachNewThreadSelector:@selector(useNSInvocationOperation:) toTarget:self withObject:nil];
+//}
 
 // 1、 创建NSInvocationOperation对象，在当前线程中执行封装好的操作op。
-- (void)useNSInvocationOperation {
+- (IBAction)useNSInvocationOperation:(UIButton *)sender {
     NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task1) object:nil];
     [op start];
 }
@@ -68,7 +68,7 @@
 }
 
 // 2、创建NSBlockOperation对象，直接跟上要执行的操作，在当前线程执行操作
-- (void)useNSBlockOperation {
+- (IBAction)useNSBlockOperation:(UIButton *)sender {
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
         for (int i = 0; i < 2; i++) {
             [NSThread sleepForTimeInterval:1];
@@ -79,7 +79,7 @@
 }
 
 // 3、如果一个 NSBlockOperation 对象封装了多个操作。NSBlockOperation 是否开启新线程，取决于操作的个数。如果添加的操作的个数多，就会自动开启新线程。当然开启的线程数是由系统来决定的。
-- (void)useAddExcuteoperation {
+- (IBAction)useAddExcuteoperation:(UIButton *)sender {
     // 1---<NSThread: 0x6000017f5980>{number = 3, name = (null)}
     // blockOperationWithBlock也不一定在主线程上执行
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
@@ -136,7 +136,7 @@
 
 // 4、创建NSOperation的自定义子类
 
-- (void)useNSOperationSubClass {
+- (IBAction)useNSOperationSubClass:(UIButton *)sender {
     HGMOperation *op = [[HGMOperation alloc] init];
     [op start];
 }
@@ -146,7 +146,7 @@
 
 // 5、创建操作，添加到创建的队列中执行
 // 自定义的队列
-- (void)addOperationToQueue {
+- (IBAction)addOperationToQueue:(UIButton *)sender {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     // 6、控制最大并发数默认为-1，为1时：串行队列，大于1时：并发队列
     queue.maxConcurrentOperationCount = 1;      // 串行队列
@@ -184,7 +184,7 @@
 }
 
 // 7、操作依赖
-- (void)useDepandency {
+- (IBAction)useDepandency:(UIButton *)sender {
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
@@ -201,7 +201,7 @@
 
 // 8、priority优先级
 
-- (void)usePriority {
+- (IBAction)usePriority:(UIButton *)sender {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     NSInvocationOperation *op1 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(task1) object:nil];
@@ -237,7 +237,7 @@
 
 // 9、线程通讯
 
-- (void)threadCommunication {
+- (IBAction)threadCommunication:(UIButton *)sender {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     [queue addOperationWithBlock:^{
@@ -255,7 +255,7 @@
 
 // 10、线程安全
 
-- (void)buyTicket {
+- (IBAction)buyTicket:(UIButton *)sender {
     NSOperationQueue *queue1 = [[NSOperationQueue alloc] init];
     queue1.maxConcurrentOperationCount = 1;
     

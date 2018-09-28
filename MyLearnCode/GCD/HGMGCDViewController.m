@@ -38,11 +38,11 @@
     // 8
 //    [self barrier];
     // 9
-    [self apply];
+//    [self apply];
 }
 
 // 1、并发队列，同步执行
-- (void)syncConcurrent {
+- (IBAction)syncConcurrent:(UIButton *)sender {
     // 创建并发队列
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm", DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"syncConcurrent begin");
@@ -72,8 +72,8 @@
     // 结果：阻塞主线程，在主线程同步执行任务
 }
 
-// 并发队列，异步执行
-- (void)asyncConcurrent {
+// 2、并发队列，异步执行----开启多条线程(系统决定)
+- (IBAction)asyncConcurrent:(UIButton *)sender {
     // 创建并发队列
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm1", DISPATCH_QUEUE_CONCURRENT);
     // 全局队列，等同 创建的并发队列
@@ -106,7 +106,7 @@
 }
 
 // 3、串行队列，同步执行
-- (void)syncSerial {
+- (IBAction)syncSerial:(UIButton *)sender {
     // 创建串行队列
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm2", DISPATCH_QUEUE_SERIAL);
     NSLog(@"syncSerial begin");
@@ -135,8 +135,8 @@
     // 结果：在主线程，串行执行任务(同情况1)
 }
 
-// 4、创建串行队列，异步执行任务
-- (void)asyncSerial {
+// 4、串行队列，异步执行----开启一条子线程串行执行任务()
+- (IBAction)asyncSerial:(UIButton *)sender {
     // 创建串行队列
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm3", DISPATCH_QUEUE_SERIAL);
     NSLog(@"asyncSerial begin");
@@ -168,7 +168,7 @@
 }
 
 // 5、主队列，同步执行******************************产生死锁
-- (void)mainSync {
+- (IBAction)mainSync:(UIButton *)sender {
     dispatch_queue_t main = dispatch_get_main_queue();
     NSLog(@"mainSync begin");
     dispatch_sync(main, ^{
@@ -190,8 +190,15 @@
     //                                                  而添加的任务又在等mainSync执行完才能继续
 }
 
+// 5.1、解决死锁
+- (IBAction)resolveDeadLock:(UIButton *)sender {
+    //-----创建新的线程，在新的线程中获取主线程添加任务执行-----
+    [NSThread detachNewThreadSelector:@selector(mainSync:) toTarget:self withObject:nil];
+}
+
+
 // 6、主队列，异步执行
-- (void)mainAsync {
+- (IBAction)mainAsync:(UIButton *)sender {
     // 主队列
     dispatch_queue_t main = dispatch_get_main_queue();
     NSLog(@"mainAsync begin");
@@ -214,7 +221,7 @@
 }
 
 // 7、线程间通讯
-- (void)threadCommunication {
+-(IBAction)threadCommunication:(UIButton *)sender {
     dispatch_queue_t global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_t main = dispatch_get_main_queue();
     
@@ -231,7 +238,7 @@
 }
 
 // 8、barrier
-- (void)barrier {
+- (IBAction)barrier:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm8", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{
@@ -243,7 +250,7 @@
         [NSThread sleepForTimeInterval:2];
         NSLog(@"task1 %@", [NSThread currentThread]);
     });
-    // 阑珊后添加的任务，在阑珊任务执行完之后，才能执行
+    // 栅栏中的block操作在并发队列中，同一时间有且只有此任务执行。
     dispatch_barrier_async(queue, ^{
         
         [NSThread sleepForTimeInterval:2];
@@ -263,7 +270,7 @@
 }
 
 // 9、apply
-- (void)apply {
+- (IBAction)apply:(UIButton *)sender {
     dispatch_queue_t queue = dispatch_queue_create("com.nick.gm9", DISPATCH_QUEUE_CONCURRENT);
     
 //    NSArray *arr = @[@"a", @"b", @"c", @"d", @"e"];
