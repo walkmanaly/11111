@@ -87,6 +87,7 @@
 //    [self testMethodSwizzling];
 //    [self requestSkyWhether];
 //    [self pushTbv];
+//    [self gmGCD];
 }
 
 - (void)pushTbv {
@@ -123,12 +124,12 @@
 //    [self testKeychain];
 //    [self testClassCluster];
 //    [self testRAC];
-//    [self testJSDemo];
+    [self testJSDemo];
 //    [self testDate];
 //    [self testBlock];
 //    [self operation];
 //    [self nsthread];
-    [self gmGCD];
+//    [self gmGCD];
 }
 
 - (void)gmGCD {
