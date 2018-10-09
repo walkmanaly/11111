@@ -22,6 +22,7 @@ PODS:
     - FBRetainCycleDetector
   - ReactiveObjC (3.1.0)
   - SAMKeychain (1.5.3)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -29,6 +30,17 @@ DEPENDENCIES:
   - MLeaksFinder
   - ReactiveObjC
   - SAMKeychain
+  - YYCache
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FBRetainCycleDetector
+    - FMDB
+    - MLeaksFinder
+    - ReactiveObjC
+    - SAMKeychain
+    - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -37,7 +49,8 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 6ae20b05274aca0f54e4673566f7bce4041595e9
+PODFILE CHECKSUM: 6c7815b44fcbc51167e89d505eb4f5224ee58072
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

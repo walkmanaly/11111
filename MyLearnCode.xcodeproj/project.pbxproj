@@ -718,7 +718,6 @@
 				01CD2A1720E487E2004C8FDF /* Sources */,
 				01CD2A1820E487E2004C8FDF /* Frameworks */,
 				01CD2A1920E487E2004C8FDF /* Resources */,
-				3B243A95E0140C400B62D1B0 /* [CP] Embed Pods Frameworks */,
 				F1F6A2753AA159D736AE9E3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -794,21 +793,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B243A95E0140C400B62D1B0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLearnCode/Pods-MyLearnCode-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		99243B4D3E10B68C0D503FC9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

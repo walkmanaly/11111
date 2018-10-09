@@ -124,12 +124,13 @@
 //    [self testKeychain];
 //    [self testClassCluster];
 //    [self testRAC];
-    [self testJSDemo];
+//    [self testJSDemo];
 //    [self testDate];
 //    [self testBlock];
 //    [self operation];
 //    [self nsthread];
 //    [self gmGCD];
+    [self requestSkyWhether];
 }
 
 - (void)gmGCD {

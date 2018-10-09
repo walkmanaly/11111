@@ -7,5 +7,6 @@ pod 'MLeaksFinder'
 pod 'FMDB'
 pod 'SAMKeychain'
 pod 'ReactiveObjC'
+pod 'YYCache'
 
 end
