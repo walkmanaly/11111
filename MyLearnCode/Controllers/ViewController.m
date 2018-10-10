@@ -83,7 +83,7 @@
 
 //    [self testRuntime1];
 //    [self demoRequest];
-//    [self pushToHGMRunloopViewController];
+    [self pushToHGMRunloopViewController];
 //    [self testMethodSwizzling];
 //    [self requestSkyWhether];
 //    [self pushTbv];
