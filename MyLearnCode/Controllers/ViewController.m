@@ -83,7 +83,7 @@
 
 //    [self testRuntime1];
 //    [self demoRequest];
-    [self pushToHGMRunloopViewController];
+//    [self pushToHGMRunloopViewController];
 //    [self testMethodSwizzling];
 //    [self requestSkyWhether];
 //    [self pushTbv];
@@ -122,7 +122,7 @@
 //    [self testFMDB];
 //    [self demoNsoperation];
 //    [self testKeychain];
-//    [self testClassCluster];
+    [self testClassCluster];
 //    [self testRAC];
 //    [self testJSDemo];
 //    [self testDate];
@@ -130,7 +130,7 @@
 //    [self operation];
 //    [self nsthread];
 //    [self gmGCD];
-    [self requestSkyWhether];
+//    [self requestSkyWhether];
 }
 
 - (void)gmGCD {
